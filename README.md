@@ -1,4 +1,4 @@
-<img src="https://github.com/ntoporcov/iQbit/raw/master/src/images/logo_round.png" alt="iQbit logo" title="iQbit Logo" align="right" height="300" />
+<img src="https://github.com/ntoporcov/iQbit/raw/master/app/images/logo_round.png" alt="iQbit logo" title="iQbit Logo" align="right" height="300" />
 
 # iQbit
 
