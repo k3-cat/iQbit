@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import { StatWithIcon } from "./StatWithIcon";
 import {IoPeople, IoServer} from "react-icons/io5";
-import { useIsLargeScreen } from "../utils/screenSize";
+import { useIsLargeScreen } from "@/utils/screenSize";
 import filesize from "filesize";
 export interface SeedsAndPeersProps {
   seeds: string;

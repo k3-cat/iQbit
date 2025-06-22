@@ -5,7 +5,7 @@ import {
   FormLabel,
   Select,
 } from "@chakra-ui/react";
-import { TorrSettings } from "../../../types";
+import { TorrSettings } from "@/types";
 import { useSettingsCtx } from "../useSettings";
 
 export type SettingsSelectOption = {

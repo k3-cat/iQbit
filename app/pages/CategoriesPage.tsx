@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import PageHeader from "../components/PageHeader";
+import PageHeader from "#/PageHeader";
 import { useMutation, useQuery } from "react-query";
-import { TorrClient } from "../utils/TorrClient";
+import { TorrClient } from "@/utils/TorrClient";
 import {
   Button,
   Flex,
@@ -16,13 +16,13 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { IoTrash } from "react-icons/io5";
-import IosBottomSheet from "../components/ios/IosBottomSheet";
-import { TorrCategory } from "../types";
+import IosBottomSheet from "#/ios/IosBottomSheet";
+import { TorrCategory } from "@/types";
 import { Input } from "@chakra-ui/input";
-import { useIsLargeScreen } from "../utils/screenSize";
+import { useIsLargeScreen } from "@/utils/screenSize";
 import { MobileSettingsAddButton } from "./SearchPluginsPage";
 import { useLocation } from "react-router-dom";
-import { Pages } from "../Pages";
+import { Pages } from "@/pages";
 
 const CategoriesPage = () => {
   const { data, refetch } = useQuery(

@@ -10,9 +10,9 @@ import {
 } from "@chakra-ui/react";
 import LogoHeader from "./LogoHeader";
 import IosInput from "./ios/IosInput";
-import { TorrClient } from "../utils/TorrClient";
+import { TorrClient } from "@/utils/TorrClient";
 import { LoggedInRoutes } from "../Routes";
-import { CredsLocalStorageKey, useLogin } from "../utils/useLogin";
+import { CredsLocalStorageKey, useLogin } from "@/utils/useLogin";
 import { useQuery } from "react-query";
 
 export const AuthChecker = () => {

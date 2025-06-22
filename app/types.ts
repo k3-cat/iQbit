@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { useFilterStateReturn } from "./components/Filters";
+import { useFilterStateReturn } from "#/Filters";
 
 export type TorrCategories = {
   [i: string]: TorrCategory;

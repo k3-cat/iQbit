@@ -1,5 +1,5 @@
 import axios from "axios";
-import { rarbgTorrent } from "../types";
+import { rarbgTorrent } from "@/types";
 
 const devURL = "http://localhost:5005/";
 const useLocalServer = false;

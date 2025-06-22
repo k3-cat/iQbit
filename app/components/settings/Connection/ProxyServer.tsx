@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import SettingsBox from "../SettingsBox";
 import SettingsSelect, { SettingsSelectOption } from "../Inputs/SettingsSelect";
-import { TorrSettingsProxyType } from "../../../types";
+import { TorrSettingsProxyType } from "@/types";
 import SettingsTextInput from "../Inputs/SettingsTextInput";
 import { Flex } from "@chakra-ui/react";
 import SettingsSwitch from "../Inputs/SettingsSwitch";

@@ -1,16 +1,16 @@
-import { SearchProviderComponentProps } from "../types";
+import { SearchProviderComponentProps } from "@/types";
 import { Flex, VStack } from "@chakra-ui/react";
-import IosSearch from "../components/ios/IosSearch";
+import IosSearch from "#/ios/IosSearch";
 import { useMutation } from "react-query";
-import TorrentDownloadBox from "../components/TorrentDownloadBox";
-import SeedsAndPeers from "../components/SeedsAndPeers";
+import TorrentDownloadBox from "#/TorrentDownloadBox";
+import SeedsAndPeers from "#/SeedsAndPeers";
 import React, {useEffect, useMemo, useState} from "react";
-import TorrentMovieData from "../components/TorrentMovieData";
-import Filters from "../components/Filters";
+import TorrentMovieData from "#/TorrentMovieData";
+import Filters from "#/Filters";
 import { parseFromString, qualityAliases, typeAliases } from "./tpb";
-import { rarbgAPI, RarbgCategoryDictionary } from "../utils/RarBGClient";
+import { rarbgAPI, RarbgCategoryDictionary } from "@/utils/RarBGClient";
 import ReactGA from "react-ga";
-import CategorySelect from "../components/CategorySelect";
+import CategorySelect from "#/CategorySelect";
 import {SectionSM} from "./yts";
 
 const RarbgSearch = (props: SearchProviderComponentProps) => {

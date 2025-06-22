@@ -7,7 +7,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { PageLabels, Pages } from "../Pages";
+import { PageLabels, Pages } from "@/pages";
 import { useLocalStorage } from "usehooks-ts";
 
 export const defaultTabs: PageLabels[] = ["Search", "Trending"];

@@ -1,16 +1,16 @@
-import {SearchProviderComponentProps, TPBRecord} from "../types";
+import {SearchProviderComponentProps, TPBRecord} from "@/types";
 import {Flex, VStack} from "@chakra-ui/react";
-import IosSearch from "../components/ios/IosSearch";
+import IosSearch from "#/ios/IosSearch";
 import {useMutation} from "react-query";
 import axios from "axios";
-import TorrentDownloadBox from "../components/TorrentDownloadBox";
+import TorrentDownloadBox from "#/TorrentDownloadBox";
 import {SectionSM, useSearchFromParams} from "./yts";
-import SeedsAndPeers from "../components/SeedsAndPeers";
+import SeedsAndPeers from "#/SeedsAndPeers";
 import React, {useEffect, useMemo, useState} from "react";
-import TorrentMovieData from "../components/TorrentMovieData";
-import Filters from "../components/Filters";
+import TorrentMovieData from "#/TorrentMovieData";
+import Filters from "#/Filters";
 import ReactGA from "react-ga";
-import CategorySelect from "../components/CategorySelect";
+import CategorySelect from "#/CategorySelect";
 
 export type AliasList = { name: string; aliases?: string[] }[];
 

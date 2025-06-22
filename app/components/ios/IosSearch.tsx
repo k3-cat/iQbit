@@ -8,7 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { IoSearch } from "react-icons/io5";
-import { useIsLargeScreen } from "../../utils/screenSize";
+import { useIsLargeScreen } from "@/utils/screenSize";
 
 export interface IosSearchProps extends InputProps {
   onSearch: () => void;

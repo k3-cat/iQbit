@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import { useLocalStorage } from "usehooks-ts";
-import { useIsLargeScreen } from "../utils/screenSize";
+import { useIsLargeScreen } from "@/utils/screenSize";
 
 export type Announcement = {
   id: string;

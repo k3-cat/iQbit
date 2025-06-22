@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
-import { SearchProviderComponentProps } from "../types";
-import IosSearch from "../components/ios/IosSearch";
+import { SearchProviderComponentProps } from "@/types";
+import IosSearch from "#/ios/IosSearch";
 import {
   Button,
   Flex,
@@ -11,14 +11,14 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useMutation, useQuery } from "react-query";
-import { TorrClient } from "../utils/TorrClient";
-import TorrentDownloadBox from "../components/TorrentDownloadBox";
-import SeedsAndPeers from "../components/SeedsAndPeers";
+import { TorrClient } from "@/utils/TorrClient";
+import TorrentDownloadBox from "#/TorrentDownloadBox";
+import SeedsAndPeers from "#/SeedsAndPeers";
 import { IoList, IoStop } from "react-icons/io5";
-import { useIsLargeScreen } from "../utils/screenSize";
-import { StatWithIcon } from "../components/StatWithIcon";
+import { useIsLargeScreen } from "@/utils/screenSize";
+import { StatWithIcon } from "#/StatWithIcon";
 import { parseFromString, qualityAliases, typeAliases } from "./tpb";
-import Filters from "../components/Filters";
+import Filters from "#/Filters";
 
 const PluginSearch = (props: SearchProviderComponentProps) => {
   const [searchId, setSearchId] = useState<number>();

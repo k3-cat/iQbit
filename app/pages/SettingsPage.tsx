@@ -1,5 +1,5 @@
 import React, { Fragment, ReactElement, useState } from "react";
-import { useIsLargeScreen } from "../utils/screenSize";
+import { useIsLargeScreen } from "@/utils/screenSize";
 import {
   IoAlbums,
   IoChatbubble,
@@ -24,16 +24,16 @@ import {
   Heading,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { smartMap } from "../utils/smartMap";
-import WebUIPage from "../components/settings/WebUI/WebUIPage";
-import { SettingsProvider } from "../components/settings/useSettings";
-import DownloadsPage from "../components/settings/Downloads/DownloadsPage";
-import SaveAndResetButtons from "../components/settings/SaveAndResetButtons";
-import ConnectionPage from "../components/settings/Connection/ConnectionPage";
-import SpeedPage from "../components/settings/Speed/SpeedPage";
-import RequestMoreSettings from "../components/settings/RequestMoreSettings";
-import { logout } from "../components/Auth";
-import AllAnnouncementsPage from "../components/settings/AllAnnouncements";
+import { smartMap } from "@/utils/smartMap";
+import WebUIPage from "#/settings/WebUI/WebUIPage";
+import { SettingsProvider } from "#/settings/useSettings";
+import DownloadsPage from "#/settings/Downloads/DownloadsPage";
+import SaveAndResetButtons from "#/settings/SaveAndResetButtons";
+import ConnectionPage from "#/settings/Connection/ConnectionPage";
+import SpeedPage from "#/settings/Speed/SpeedPage";
+import RequestMoreSettings from "#/settings/RequestMoreSettings";
+import { logout } from "#/Auth";
+import AllAnnouncementsPage from "#/settings/AllAnnouncements";
 import SearchPluginsPage from "./SearchPluginsPage";
 import CategoriesPage from "./CategoriesPage";
 import FontSizeSelection from "./FontSizeSelection";

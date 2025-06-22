@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { TorrTorrentInfo } from "../types";
+import { TorrTorrentInfo } from "@/types";
 import {
   Box,
   Button,
@@ -17,7 +17,7 @@ import {
 import ActivityRings from "react-activity-rings";
 import filesize from "filesize";
 import SwarmVisualizer from "./SwarmVisualizer";
-import { CreateETAString } from "../utils/createETAString";
+import { CreateETAString } from "@/utils/createETAString";
 
 export interface TorrentInformationContentProps {
   torrentData: TorrTorrentInfo;

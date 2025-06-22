@@ -1,6 +1,6 @@
 import React from "react";
 import { AspectRatio, Box, Flex, Grid, Text } from "@chakra-ui/react";
-import { useIsTouchDevice } from "../hooks/useIsTouchDevice";
+import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
 
 export interface PosterGridProps<T> {
   list: T[];

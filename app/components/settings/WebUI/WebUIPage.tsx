@@ -6,7 +6,7 @@ import SettingsTextInput from "../Inputs/SettingsTextInput";
 import { Link, SimpleGrid } from "@chakra-ui/react";
 import SettingsTextArea from "../Inputs/SettingsTextArea";
 import SettingsSelect, { SettingsSelectOption } from "../Inputs/SettingsSelect";
-import { TorrDynDNSService } from "../../../types";
+import { TorrDynDNSService } from "@/types";
 
 export interface BehaviorPageProps {}
 

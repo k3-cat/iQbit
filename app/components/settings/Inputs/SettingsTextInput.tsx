@@ -8,7 +8,7 @@ import {
   LightMode,
   Switch,
 } from "@chakra-ui/react";
-import { TorrSettings } from "../../../types";
+import { TorrSettings } from "@/types";
 import { useSettingsCtx } from "../useSettings";
 import { Input, InputGroup } from "@chakra-ui/input";
 

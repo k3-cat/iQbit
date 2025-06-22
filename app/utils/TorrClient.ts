@@ -6,7 +6,7 @@ import {
   TorrPluginSearchResultResponse,
   TorrSettings,
   TorrTorrentInfo,
-} from "../types";
+} from "@/types";
 
 let serverAddress = new URL(".", window.location.href).href
 

@@ -16,7 +16,7 @@ import {
   UseDisclosureReturn,
 } from "@chakra-ui/react";
 import React, { PropsWithChildren, ReactElement } from "react";
-import { useIsLargeScreen } from "../../utils/screenSize";
+import { useIsLargeScreen } from "@/utils/screenSize";
 import { IoCheckmark } from "react-icons/io5";
 
 export type IosActionSheetOptions = {

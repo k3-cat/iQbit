@@ -2,7 +2,7 @@ import React from "react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import DefaultLayout from "./layout/default";
 import { useIsLargeScreen } from "./utils/screenSize";
-import { Pages } from "./Pages";
+import { Pages } from "@/pages";
 
 export const LoggedInRoutes = () => {
   const isLarge = useIsLargeScreen();

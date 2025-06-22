@@ -3,14 +3,14 @@ import React from "react";
 import { ChakraProvider, extendTheme, ThemeConfig } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { mode } from "@chakra-ui/theme-tools";
-import { AuthChecker } from "./components/Auth";
-import useScrollPosition from "./hooks/useScrollPosition";
-import { useIsTouchDevice } from "./hooks/useIsTouchDevice";
-import AnnouncementChecker from "./components/AnnouncementChecker";
+import { AuthChecker } from "#/Auth";
+import useScrollPosition from "@/hooks/useScrollPosition";
+import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
+import AnnouncementChecker from "#/AnnouncementChecker";
 import pckg from "../package.json";
 
 import ReactGA from "react-ga";
-import FontSizeProvider from "./components/FontSizeProvider";
+import FontSizeProvider from "#/FontSizeProvider";
 
 ReactGA.initialize("UA-60234062-3");
 ReactGA.pageview("/");

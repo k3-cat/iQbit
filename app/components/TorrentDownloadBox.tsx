@@ -7,9 +7,9 @@ import {
   LightMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { useIsLargeScreen } from "../utils/screenSize";
+import { useIsLargeScreen } from "@/utils/screenSize";
 import { useMutation } from "react-query";
-import { TorrClient } from "../utils/TorrClient";
+import { TorrClient } from "@/utils/TorrClient";
 import { IoCheckmark } from "react-icons/io5";
 
 export interface TorrentDownloadBoxProps {

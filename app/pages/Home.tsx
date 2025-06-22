@@ -1,4 +1,4 @@
-import PageHeader from "../components/PageHeader";
+import PageHeader from "#/PageHeader";
 import {
   Box,
   Button,
@@ -18,19 +18,19 @@ import {
 } from "@chakra-ui/react";
 import { IoDocumentAttach, IoPause, IoPlay } from "react-icons/io5";
 import { useMutation, useQuery } from "react-query";
-import { TorrClient } from "../utils/TorrClient";
+import { TorrClient } from "@/utils/TorrClient";
 import { useMemo, useState } from "react";
-import TorrentBox from "../components/TorrentBox";
-import { TorrTorrentInfo } from "../types";
-import IosBottomSheet from "../components/ios/IosBottomSheet";
+import TorrentBox from "#/TorrentBox";
+import { TorrTorrentInfo } from "@/types";
+import IosBottomSheet from "#/ios/IosBottomSheet";
 import { Input } from "@chakra-ui/input";
-import { useIsLargeScreen } from "../utils/screenSize";
-import { randomTorrent } from "../data";
+import { useIsLargeScreen } from "@/utils/screenSize";
+import { randomTorrent } from "@/data";
 import "react-virtualized/styles.css";
-import { FilterHeading } from "../components/Filters";
-import stateDictionary from "../utils/StateDictionary";
+import { FilterHeading } from "#/Filters";
+import stateDictionary from "@/utils/StateDictionary";
 import { useLocalStorage } from "usehooks-ts";
-import { useFontSizeContext } from "../components/FontSizeProvider"; // only needs to be imported once
+import { useFontSizeContext } from "#/FontSizeProvider"; // only needs to be imported once
 
 import { FC } from "react";
 import {

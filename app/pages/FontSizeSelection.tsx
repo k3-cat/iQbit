@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useIsLargeScreen } from "../utils/screenSize";
-import PageHeader from "../components/PageHeader";
+import { useIsLargeScreen } from "@/utils/screenSize";
+import PageHeader from "#/PageHeader";
 import {
   Button,
   Flex,
@@ -11,7 +11,7 @@ import {
   Select,
   useDisclosure,
 } from "@chakra-ui/react";
-import { useFontSizeContext } from "../components/FontSizeProvider";
+import { useFontSizeContext } from "#/FontSizeProvider";
 import { Input } from "@chakra-ui/input";
 
 export interface FontSizeSelectionProps {}

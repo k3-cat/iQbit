@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PageHeader from "../components/PageHeader";
+import PageHeader from "#/PageHeader";
 import TPBSearch from "../searchAPIs/tpb";
 import {
   Box,
@@ -13,11 +13,11 @@ import {
 } from "@chakra-ui/react";
 import YTSSearch from "../searchAPIs/yts";
 import { useLocation } from "react-router-dom";
-import { useFilterState } from "../components/Filters";
+import { useFilterState } from "#/Filters";
 import YtsLogo from "../images/ytsLogo";
 import TpbLogo from "../images/TpbLogo";
 import { useQuery } from "react-query";
-import { TorrClient } from "../utils/TorrClient";
+import { TorrClient } from "@/utils/TorrClient";
 import QbitLogo from "../images/qbitLogo";
 import { SearchPluginsPageQuery } from "./SearchPluginsPage";
 import PluginSearch from "../searchAPIs/PluginSearch";

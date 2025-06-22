@@ -8,18 +8,18 @@ import {
   useColorModeValue,
   useTheme,
 } from "@chakra-ui/react";
-import NavButton from "../components/buttons/NavButton";
+import NavButton from "#/buttons/NavButton";
 import { IconBaseProps } from "react-icons";
-import { useIsLargeScreen } from "../utils/screenSize";
-import { PageLabels, Pages } from "../Pages";
-import Home from "../pages/Home";
+import { useIsLargeScreen } from "@/utils/screenSize";
+import { PageLabels, Pages } from "@/pages";
+import Home from "@/pages/Home";
 import { useLocation } from "react-router-dom";
-import useScrollPosition from "../hooks/useScrollPosition";
-import { useLogin } from "../utils/useLogin";
-import { logout } from "../components/Auth";
+import useScrollPosition from "@/hooks/useScrollPosition";
+import { useLogin } from "@/utils/useLogin";
+import { logout } from "#/Auth";
 import { isAndroid, isIOS } from "react-device-detect";
 import { useReadLocalStorage } from "usehooks-ts";
-import { defaultTabs } from "../pages/TabSelectorPage";
+import { defaultTabs } from "@/pages/TabSelectorPage";
 
 export interface DefaultLayoutProps {}
 

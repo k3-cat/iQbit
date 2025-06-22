@@ -3,7 +3,7 @@ import {IoChevronDown} from "react-icons/io5";
 import IosActionSheet from "./ios/IosActionSheet";
 import React from "react";
 import {useQuery} from "react-query";
-import {TorrClient} from "../utils/TorrClient";
+import {TorrClient} from "@/utils/TorrClient";
 
 export type CategorySelectProps = {
     category:string;

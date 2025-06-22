@@ -13,7 +13,7 @@ import {
   UseDisclosureReturn,
 } from "@chakra-ui/react";
 import { IoClose, IoFilter } from "react-icons/io5";
-import { smartMap } from "../utils/smartMap";
+import { smartMap } from "@/utils/smartMap";
 import { Input } from "@chakra-ui/input";
 
 const qualities = ["720p", "1080p", "2160p"] as const;

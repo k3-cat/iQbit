@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PageHeader from "../components/PageHeader";
+import PageHeader from "#/PageHeader";
 import {
   Box,
   Button,
@@ -17,15 +17,15 @@ import {
   UseDisclosureReturn,
 } from "@chakra-ui/react";
 import { useMutation, useQuery, useQueryClient } from "react-query";
-import { TorrClient } from "../utils/TorrClient";
-import { useIsLargeScreen } from "../utils/screenSize";
-import IosActionSheet from "../components/ios/IosActionSheet";
-import { TorrPlugin, TorrPublicPlugin } from "../types";
+import { TorrClient } from "@/utils/TorrClient";
+import { useIsLargeScreen } from "@/utils/screenSize";
+import IosActionSheet from "#/ios/IosActionSheet";
+import { TorrPlugin, TorrPublicPlugin } from "@/types";
 import { IoConstruct, IoEllipsisVertical, IoPerson } from "react-icons/io5";
-import IosBottomSheet from "../components/ios/IosBottomSheet";
+import IosBottomSheet from "#/ios/IosBottomSheet";
 import { Input } from "@chakra-ui/input";
 import axios from "axios";
-import { StatWithIcon } from "../components/StatWithIcon";
+import { StatWithIcon } from "#/StatWithIcon";
 
 const SearchPlugin = ({ plugin }: { plugin: TorrPlugin }) => {
   const pluginOptionsDisclosure = useDisclosure();

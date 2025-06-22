@@ -8,7 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaPlus } from "react-icons/fa";
-import { useIsLargeScreen } from "../utils/screenSize";
+import { useIsLargeScreen } from "@/utils/screenSize";
 import { IoChevronBack } from "react-icons/io5";
 
 export interface PageHeaderProps {

@@ -1,5 +1,5 @@
 import React, { ReactElement, ReactNode } from "react";
-import Home from "./pages/Home";
+import Home from "@/pages/Home";
 import {
   IoCog,
   IoCogOutline,
@@ -16,13 +16,13 @@ import {
   IoTrendingUp,
   IoTrendingUpOutline,
 } from "react-icons/io5";
-import SearchPage from "./pages/SearchPage";
-import CategoriesPage from "./pages/CategoriesPage";
-import SettingsPage from "./pages/SettingsPage";
-import SearchPluginsPage from "./pages/SearchPluginsPage";
-import TrendingPage from "./pages/TrendingPage";
-import FontSizeSelection from "./pages/FontSizeSelection";
-import TabSelectorPage from "./pages/TabSelectorPage";
+import SearchPage from "@/pages/SearchPage";
+import CategoriesPage from "@/pages/CategoriesPage";
+import SettingsPage from "@/pages/SettingsPage";
+import SearchPluginsPage from "@/pages/SearchPluginsPage";
+import TrendingPage from "@/pages/TrendingPage";
+import FontSizeSelection from "@/pages/FontSizeSelection";
+import TabSelectorPage from "@/pages/TabSelectorPage";
 
 export type PageNames =
   | "sideNav"

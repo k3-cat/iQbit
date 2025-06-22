@@ -21,8 +21,8 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
-import { TorrCategory, TorrTorrentInfo } from "../types";
-import stateDictionary from "../utils/StateDictionary";
+import { TorrCategory, TorrTorrentInfo } from "@/types";
+import stateDictionary from "@/utils/StateDictionary";
 import filesize from "filesize";
 import {
   IoArrowDown,
@@ -38,12 +38,12 @@ import {
 } from "react-icons/io5";
 import { StatWithIcon } from "./StatWithIcon";
 import { useMutation } from "react-query";
-import { TorrClient } from "../utils/TorrClient";
+import { TorrClient } from "@/utils/TorrClient";
 import IosActionSheet from "./ios/IosActionSheet";
 import IosBottomSheet from "./ios/IosBottomSheet";
 import { Input } from "@chakra-ui/input";
 import TorrentInformationContent from "./TorrentInformationContent";
-import { CreateETAString } from "../utils/createETAString";
+import { CreateETAString } from "@/utils/createETAString";
 
 export interface TorrentBoxProps {
   torrentData: Omit<TorrTorrentInfo, "hash">;
