@@ -1,8 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { useMutation, useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
-import { Box, Button, Flex, LightMode, Spinner, Text, useColorModeValue, useDisclosure } from "@chakra-ui/react";
-import { MovieResult, TvResult } from "moviedb-promise";
+import type { MovieResult, TvResult } from "moviedb-promise";
 
 import { tmdbClient } from "@/utils/tmdbClient";
 import { TorrClient } from "@/utils/TorrClient";

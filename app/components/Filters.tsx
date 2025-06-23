@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { useState, type Dispatch, type SetStateAction } from "react";
 import { IoClose, IoFilter } from "react-icons/io5";
 import { Input } from "@chakra-ui/input";
 import {
@@ -12,7 +12,7 @@ import {
 	Text,
 	useColorModeValue,
 	useDisclosure,
-	UseDisclosureReturn,
+	type UseDisclosureReturn,
 } from "@chakra-ui/react";
 
 import { smartMap } from "@/utils/smartMap";

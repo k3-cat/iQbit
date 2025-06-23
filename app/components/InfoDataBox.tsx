@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 import { Box, Heading } from "@chakra-ui/react";
 
 import { StatWithIcon } from "./StatWithIcon";

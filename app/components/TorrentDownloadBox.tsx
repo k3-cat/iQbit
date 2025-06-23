@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { type PropsWithChildren } from "react";
 import { IoCheckmark } from "react-icons/io5";
 import { useMutation } from "react-query";
 import { Box, Button, Flex, Heading, LightMode, useColorModeValue } from "@chakra-ui/react";

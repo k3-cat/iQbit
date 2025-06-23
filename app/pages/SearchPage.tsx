@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { useLocation } from "react-router-dom";
-import { Box, Button, ButtonProps, Flex, Heading, LightMode, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, type ButtonProps } from "@chakra-ui/react";
 
 import { TorrClient } from "@/utils/TorrClient";
 import { useFilterState } from "#/Filters";

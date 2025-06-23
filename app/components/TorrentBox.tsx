@@ -37,7 +37,7 @@ import {
 } from "@chakra-ui/react";
 import filesize from "filesize";
 
-import { TorrCategory, TorrTorrentInfo } from "@/types";
+import type { TorrCategory, TorrTorrentInfo } from "@/types";
 import { CreateETAString } from "@/utils/createETAString";
 import stateDictionary from "@/utils/StateDictionary";
 import { TorrClient } from "@/utils/TorrClient";

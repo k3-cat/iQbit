@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { type PropsWithChildren } from "react";
 import { useQuery } from "react-query";
 import { useToast } from "@chakra-ui/react";
 import axios from "axios";

@@ -1,4 +1,4 @@
-import React, { createContext, PropsWithChildren, useContext, useEffect } from "react";
+import React, { createContext, use, useEffect, type PropsWithChildren } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
 const FontSizeContext = createContext({

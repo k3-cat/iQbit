@@ -4,7 +4,7 @@ import { useMutation } from "react-query";
 import { Flex, VStack } from "@chakra-ui/react";
 import axios from "axios";
 
-import { SearchProviderComponentProps, TPBRecord } from "@/types";
+import type { SearchProviderComponentProps, TPBRecord } from "@/types";
 import CategorySelect from "#/CategorySelect";
 import Filters from "#/Filters";
 import IosSearch from "#/ios/IosSearch";

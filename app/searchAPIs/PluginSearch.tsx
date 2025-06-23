@@ -3,7 +3,7 @@ import { IoList, IoStop } from "react-icons/io5";
 import { useMutation, useQuery } from "react-query";
 import { Button, Flex, Heading, LightMode, Spinner, useColorModeValue, VStack } from "@chakra-ui/react";
 
-import { SearchProviderComponentProps } from "@/types";
+import type { SearchProviderComponentProps } from "@/types";
 import { useIsLargeScreen } from "@/utils/screenSize";
 import { TorrClient } from "@/utils/TorrClient";
 import Filters from "#/Filters";

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { rarbgTorrent } from "@/types";
+import type { rarbgTorrent } from "@/types";
 
 const devURL = "http://localhost:5005/";
 const useLocalServer = false;
@@ -52,15 +52,14 @@ api.interceptors.response.use(async (response) => {
 	return response;
 });
 
+export interface RarbgSearchResult {
+	torrent_results: rarbgTorrent[];
+	error_code?: number;
+	rate_limit?: number;
+}
+
 export const rarbgAPI = {
-	search: async (
-		query: string,
-		category: keyof typeof RarbgCategoryDictionary,
-	): Promise<{
-		torrent_results: rarbgTorrent[];
-		error_code?: number;
-		rate_limit?: number;
-	}> => {
+	search: async (query: string, category: keyof typeof RarbgCategoryDictionary): Promise<RarbgSearchResult> => {
 		const { data } = await api.get<{ torrent_results: rarbgTorrent[] }>("search", {
 			params: {
 				query,

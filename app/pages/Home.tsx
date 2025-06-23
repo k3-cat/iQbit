@@ -21,7 +21,7 @@ import {
 } from "@chakra-ui/react";
 
 import { randomTorrent } from "@/data";
-import { TorrTorrentInfo } from "@/types";
+import type { TorrTorrentInfo } from "@/types";
 import { useIsLargeScreen } from "@/utils/screenSize";
 import { TorrClient } from "@/utils/TorrClient";
 import IosBottomSheet from "#/ios/IosBottomSheet";
@@ -30,8 +30,8 @@ import TorrentBox from "#/TorrentBox";
 
 import "react-virtualized/styles.css";
 
-import { FC } from "react";
-import { List as _List, WindowScroller as _WindowScroller, ListProps, WindowScrollerProps } from "react-virtualized";
+import type { FC } from "react";
+import { List as _List, WindowScroller as _WindowScroller, type ListProps, type WindowScrollerProps } from "react-virtualized";
 import { useLocalStorage } from "usehooks-ts";
 
 import stateDictionary from "@/utils/StateDictionary";

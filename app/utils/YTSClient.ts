@@ -1,7 +1,7 @@
 import axios from "axios";
 
-import { YTSData } from "@/types";
-import { videoQualities } from "#/Filters";
+import type { YTSData } from "@/types";
+import type { videoQualities } from "#/Filters";
 
 const baseURL = `https://yts.mx/api/v2/`;
 

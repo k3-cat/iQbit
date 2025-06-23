@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 import { Box, Flex, Spinner, Text, useColorModeValue } from "@chakra-ui/react";
 
 export const StatWithIcon = ({ icon, label, lit, loading }: { icon: ReactNode; label: ReactNode; lit?: boolean; loading?: boolean }) => {

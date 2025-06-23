@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 
-import SettingsSelect, { SettingsSelectOption } from "../Inputs/SettingsSelect";
+import SettingsSelect, { type SettingsSelectOption } from "../Inputs/SettingsSelect";
 import SettingsSwitch from "../Inputs/SettingsSwitch";
 import SettingsTextInput from "../Inputs/SettingsTextInput";
 import SettingsBox from "../SettingsBox";

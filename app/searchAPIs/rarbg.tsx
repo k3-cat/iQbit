@@ -3,8 +3,8 @@ import ReactGA from "react-ga";
 import { useMutation } from "react-query";
 import { Flex, VStack } from "@chakra-ui/react";
 
-import { SearchProviderComponentProps } from "@/types";
-import { rarbgAPI, RarbgCategoryDictionary } from "@/utils/RarBGClient";
+import type { SearchProviderComponentProps } from "@/types";
+import { rarbgAPI, RarbgCategoryDictionary, type RarbgSearchResult } from "@/utils/RarBGClient";
 import CategorySelect from "#/CategorySelect";
 import Filters from "#/Filters";
 import IosSearch from "#/ios/IosSearch";

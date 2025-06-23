@@ -1,8 +1,8 @@
-import React, { ReactNode, useState } from "react";
+import React, { useState, type ReactNode } from "react";
 import { Input, InputGroup } from "@chakra-ui/input";
 import { Flex, FormControl, FormHelperText, FormLabel, InputRightAddon, LightMode, Switch } from "@chakra-ui/react";
 
-import { TorrSettings } from "@/types";
+import type { TorrSettings } from "@/types";
 import { useSettingsCtx } from "../useSettings";
 
 export interface SettingsSwitchProps {

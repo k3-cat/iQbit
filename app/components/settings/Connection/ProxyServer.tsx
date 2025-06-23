@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Flex } from "@chakra-ui/react";
 
 import { TorrSettingsProxyType } from "@/types";
-import SettingsSelect, { SettingsSelectOption } from "../Inputs/SettingsSelect";
+import SettingsSelect, { type SettingsSelectOption } from "../Inputs/SettingsSelect";
 import SettingsSwitch from "../Inputs/SettingsSwitch";
 import SettingsTextInput from "../Inputs/SettingsTextInput";
 import SettingsBox from "../SettingsBox";

@@ -1,9 +1,9 @@
-import React, { PropsWithChildren, ReactElement } from "react";
+import React, { type PropsWithChildren, type ReactElement } from "react";
 import { IoCheckmark } from "react-icons/io5";
 import {
 	Box,
 	Button,
-	ButtonProps,
+	type ButtonProps,
 	Drawer,
 	DrawerBody,
 	DrawerContent,
@@ -15,7 +15,7 @@ import {
 	MenuItem,
 	MenuList,
 	useColorModeValue,
-	UseDisclosureReturn,
+	type UseDisclosureReturn,
 } from "@chakra-ui/react";
 
 import { useIsLargeScreen } from "@/utils/screenSize";

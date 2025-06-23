@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { TorrCategories, TorrMainData, TorrPlugin, TorrPluginSearchResultResponse, TorrSettings, TorrTorrentInfo } from "@/types";
+import type { TorrCategories, TorrMainData, TorrPlugin, TorrPluginSearchResultResponse, TorrSettings, TorrTorrentInfo } from "@/types";
 
 let serverAddress = new URL(".", window.location.href).href;
 

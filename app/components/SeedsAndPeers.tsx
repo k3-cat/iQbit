@@ -1,7 +1,7 @@
 import React from "react";
 import { IoPeople, IoServer } from "react-icons/io5";
 import { Flex, Text } from "@chakra-ui/react";
-import filesize from "filesize";
+import { filesize } from "filesize";
 
 import { useIsLargeScreen } from "@/utils/screenSize";
 import { StatWithIcon } from "./StatWithIcon";

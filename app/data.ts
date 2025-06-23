@@ -1,4 +1,4 @@
-import { TorrTorrentInfo } from "@/types";
+import type { TorrTorrentInfo } from "@/types";
 
 export const randomTorrent: TorrTorrentInfo = {
 	hash: "",

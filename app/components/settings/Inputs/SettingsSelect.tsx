@@ -1,7 +1,7 @@
 import React from "react";
 import { FormControl, FormHelperText, FormLabel, Select } from "@chakra-ui/react";
 
-import { TorrSettings } from "@/types";
+import type { TorrSettings } from "@/types";
 import { useSettingsCtx } from "../useSettings";
 
 export type SettingsSelectOption = {

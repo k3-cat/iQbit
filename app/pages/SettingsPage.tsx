@@ -1,4 +1,4 @@
-import React, { Fragment, ReactElement, useState } from "react";
+import React, { Fragment, useState, type ReactElement } from "react";
 import {
 	IoAlbums,
 	IoChatbubble,

@@ -2,7 +2,7 @@ import React from "react";
 import { Link, SimpleGrid } from "@chakra-ui/react";
 
 import { TorrDynDNSService } from "@/types";
-import SettingsSelect, { SettingsSelectOption } from "../Inputs/SettingsSelect";
+import SettingsSelect, { type SettingsSelectOption } from "../Inputs/SettingsSelect";
 import SettingsSwitch from "../Inputs/SettingsSwitch";
 import SettingsTextArea from "../Inputs/SettingsTextArea";
 import SettingsTextInput from "../Inputs/SettingsTextInput";

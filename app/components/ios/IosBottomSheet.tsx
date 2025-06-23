@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { type PropsWithChildren } from "react";
 import {
 	Box,
 	Divider,
@@ -17,7 +17,7 @@ import {
 	ModalOverlay,
 	ModalProps,
 	useColorModeValue,
-	UseDisclosureReturn,
+	type UseDisclosureReturn,
 } from "@chakra-ui/react";
 
 import { useIsLargeScreen } from "@/utils/screenSize";

@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactNode, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, type PropsWithChildren, type ReactNode } from "react";
 import ReactGA from "react-ga";
 import { IoChevronDown, IoEarth, IoPricetags, IoTime, IoWarning } from "react-icons/io5";
 import { SiRottentomatoes } from "react-icons/si";
@@ -6,8 +6,7 @@ import { useMutation, useQuery } from "react-query";
 import { useNavigate, useParams } from "react-router-dom";
 import { AspectRatio, Box, Button, Flex, Heading, HeadingProps, Text, useBoolean, useDisclosure, VStack } from "@chakra-ui/react";
 
-import { SearchProviderComponentProps, YTSMovies } from "@/types";
-import { TorrClient } from "@/utils/TorrClient";
+import type { SearchProviderComponentProps, YTSData, YTSMovies } from "@/types";
 import { YTSClient } from "@/utils/YTSClient";
 import CategorySelect from "#/CategorySelect";
 import Filters from "#/Filters";

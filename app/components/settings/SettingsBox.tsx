@@ -1,5 +1,4 @@
-import React, { PropsWithChildren } from "react";
-import { Flex, Heading, useColorModeValue, useTheme } from "@chakra-ui/react";
+import React, { type PropsWithChildren } from "react";
 
 const SettingsBox = (props: PropsWithChildren<{ title?: string }>) => {
 	const { colors } = useTheme();

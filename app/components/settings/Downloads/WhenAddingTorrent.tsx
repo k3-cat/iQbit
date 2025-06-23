@@ -1,6 +1,6 @@
 import React from "react";
 
-import SettingsSelect, { SettingsSelectOption } from "../Inputs/SettingsSelect";
+import SettingsSelect, { type SettingsSelectOption } from "../Inputs/SettingsSelect";
 import SettingsSwitch from "../Inputs/SettingsSwitch";
 import SettingsBox from "../SettingsBox";
 

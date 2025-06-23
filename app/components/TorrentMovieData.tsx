@@ -1,7 +1,7 @@
 import React from "react";
 import { IoCube, IoFilm, IoTv } from "react-icons/io5";
 import { SimpleGrid } from "@chakra-ui/react";
-import filesize from "filesize";
+import { filesize } from "filesize";
 
 import { torrentBoxIconProps } from "../searchAPIs/yts";
 import { StatWithIcon } from "./StatWithIcon";

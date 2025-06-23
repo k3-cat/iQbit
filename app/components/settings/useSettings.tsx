@@ -1,7 +1,7 @@
-import { createContext, PropsWithChildren, useContext, useMemo, useState } from "react";
+import React, { createContext, use, useMemo, useState, type PropsWithChildren } from "react";
 import { useMutation, useQuery } from "react-query";
 
-import { TorrSettings } from "@/types";
+import type { TorrSettings } from "@/types";
 import { deepCompare } from "@/utils/deepCompare";
 import { TorrClient } from "@/utils/TorrClient";
 

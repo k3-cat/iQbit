@@ -1,6 +1,6 @@
 import React from "react";
 import { IoSearch } from "react-icons/io5";
-import { Button, Flex, Input, InputProps, LightMode, useColorModeValue } from "@chakra-ui/react";
+import { Button, Flex, Input, type InputProps } from "@chakra-ui/react";
 
 import { useIsLargeScreen } from "@/utils/screenSize";
 

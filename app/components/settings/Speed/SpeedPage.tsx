@@ -1,7 +1,7 @@
 import React from "react";
 
 import { TorrSettingsSchedulerDays } from "@/types";
-import { SettingsSelectOption } from "../Inputs/SettingsSelect";
+import type { SettingsSelectOption } from "../Inputs/SettingsSelect";
 import { AlternativeRateLimits } from "./AlternativeRateLimits";
 import { GlobalRateLimits } from "./GlobalRateLimits";
 import { RateLimitingSettings } from "./RateLimitingSettings";

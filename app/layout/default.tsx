@@ -1,12 +1,12 @@
-import React, { PropsWithChildren, useEffect } from "react";
+import React, { useEffect, type PropsWithChildren } from "react";
 import { isAndroid, isIOS } from "react-device-detect";
-import { IconBaseProps } from "react-icons";
+import type { IconBaseProps } from "react-icons";
 import { useLocation } from "react-router-dom";
 import { Box, Button, Divider, Flex, SimpleGrid, useColorModeValue, useTheme } from "@chakra-ui/react";
 import { useReadLocalStorage } from "usehooks-ts";
 
 import useScrollPosition from "@/hooks/useScrollPosition";
-import { PageLabels, Pages } from "@/Pages";
+import { Pages, type PageLabels } from "@/Pages";
 import Home from "@/pages/Home";
 import { defaultTabs } from "@/pages/TabSelectorPage";
 import { useIsLargeScreen } from "@/utils/screenSize";

@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Heading, Select, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
 import { useLocalStorage } from "usehooks-ts";
 
-import { PageLabels, Pages } from "@/Pages";
+import { Pages, type PageLabels } from "@/Pages";
 
 export const defaultTabs: PageLabels[] = ["Search", "Trending"];
 

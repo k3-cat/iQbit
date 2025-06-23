@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Button, ColorProps, Text } from "@chakra-ui/react";
 

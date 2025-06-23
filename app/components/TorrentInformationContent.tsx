@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { type PropsWithChildren } from "react";
 //@ts-ignore
 import ActivityRings from "react-activity-rings";
 import {
@@ -14,9 +14,9 @@ import {
 	useDisclosure,
 	useTheme,
 } from "@chakra-ui/react";
-import filesize from "filesize";
+import { filesize } from "filesize";
 
-import { TorrTorrentInfo } from "@/types";
+import type { TorrTorrentInfo } from "@/types";
 import { CreateETAString } from "@/utils/createETAString";
 import SwarmVisualizer from "./SwarmVisualizer";
 
