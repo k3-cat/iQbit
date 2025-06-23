@@ -61,7 +61,8 @@ run `npm run server-start` in the root of this repo. I'm not sure I could solve 
 welcome
 
 ### Docker
-For now, you must build the docker image yourself until it is uploaded to a docker registry.  To do this, first install docker on windows or mac, then:
+
+For now, you must build the docker image yourself until it is uploaded to a docker registry. To do this, first install docker on windows or mac, then:
 `docker build -t iqbit .`
 
 And to run the docker image you created:

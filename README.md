@@ -1,4 +1,4 @@
-<img src="https://github.com/ntoporcov/iQbit/raw/master/app/images/logo_round.png" alt="iQbit logo" title="iQbit Logo" align="right" height="300" />
+<img src="https://github.com/k3-cat/iQbit/raw/master/app/images/logo_round.png" alt="iQbit logo" title="iQbit Logo" align="right" height="300" />
 
 # iQbit
 
@@ -9,16 +9,16 @@ torrent clients haven't evolved in their last 20 years of popularity. iQbit is a
 modern design approaches. With that being said, this is not a data-heavy approach to torrenting (or at least not yet).
 The main focus of this projects are the following points:
 
-* Ease of Use
-* Mobile Friendly/First
-* Adhering to Human Interface Guidelines (as much as possible)
+- Ease of Use
+- Mobile Friendly/First
+- Adhering to Human Interface Guidelines (as much as possible)
 
 This is a PWA! This means you can install this app on your device through your OS default browser. Being a PWA allows us
 to have native features in the WebUI. Including:
 
-* Native PushAPI Notifications (hopefully) - Coming whenever apple releases it for iOS 16, expected 2023. Users that
+- Native PushAPI Notifications (hopefully) - Coming whenever apple releases it for iOS 16, expected 2023. Users that
   enable it could get notifications when a torrent finishes downloading
-* Camera support (maybe) - My idea is to use iOS live text feature to add a torrent by just pointing your phone into its
+- Camera support (maybe) - My idea is to use iOS live text feature to add a torrent by just pointing your phone into its
   hash id
 
 ![Screenshot](public/images/devices-pichi.png)

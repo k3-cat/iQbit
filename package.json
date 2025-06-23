@@ -1,92 +1,77 @@
 {
-  "name": "iqbit",
-  "version": "1.0.1",
-  "private": false,
-  "homepage": "./",
-  "dependencies": {
-    "@chakra-ui/react": "2.8.2",
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@types/fuzzyset.js": "^0.0.2",
-    "@types/jest": "^27.0.1",
-    "@types/js-cookie": "^3.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "18.0.15",
-    "@types/react-dom": "18.0.6",
-    "axios": "^1.6.5",
-    "cors": "^2.8.5",
-    "eslint": "^8.11.0",
-    "eslint-plugin-react": "^7.30.1",
-    "express": "^4.18.1",
-    "filesize": "^9.0.11",
-    "framer-motion": "^6",
-    "fuzzyset.js": "^1.0.7",
-    "http-proxy-middleware": "^2.0.6",
-    "iso-639-1": "^2.1.15",
-    "js-cookie": "^3.0.1",
-    "morgan": "^1.10.0",
-    "moviedb-promise": "^3.1.18",
-    "prettier": "^2.6.0",
-    "react": "18.2.0",
-    "react-activity-rings": "^1.1.0",
-    "react-device-detect": "^2.2.2",
-    "react-dom": "18.2.0",
-    "react-ga": "^3.3.1",
-    "react-icons": "^4.3.1",
-    "react-query": "^3.39.3",
-    "react-router-dom": "^6.2.2",
-    "react-scripts": "5.0.0",
-    "react-virtualized": "^9.22.3",
-    "typescript": "^4.4.2",
-    "usehooks-ts": "^2.4.2",
-    "web-vitals": "^2.1.0",
-    "ajv": "^8.16.0",
-    "@jridgewell/gen-mapping": "0.3.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "startSSL": "export HTTPS=true&&SSL_CRT_FILE=cert.pem&&SSL_KEY_FILE=key.pem react-scripts start",
-    "build": "react-scripts build && rm -rf release/public && mkdir release/public && mv -v build/* ./release/public && cp release/public/index.html release/public/login.html",
-    "winBuild": "react-scripts build && powershell Remove-Item -Recurse -Force -Confirm:$false ./release/public/* && powershell mv build/* ./release/public && powershell cp release/public/index.html release/public/login.html",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server-setup": "cd server && npm install ",
-    "server-start": "cd server && npm run serve",
-    "server-docker-start": "cd server && npm run serve:docker",
-    "server-stop": "cd server && npm run stop"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "plugin:react/recommended"
-    ],
-    "rules": {
-      "react/react-in-jsx-scope": [
-        0
-      ],
-      "react/no-unescaped-entities": [
-        0
-      ]
-    }
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "resolutions": {
-    "@types/react": "18.0.7",
-    "@types/react-dom": "18.0.6"
-  },
-  "devDependencies": {
-    "@types/react-virtualized": "^9.21.21"
-  }
+	"name": "iqbit",
+	"version": "1.0.1",
+	"private": false,
+	"homepage": "./",
+	"scripts": {
+		"start": "react-scripts start",
+		"startSSL": "export HTTPS=true&&SSL_CRT_FILE=cert.pem&&SSL_KEY_FILE=key.pem react-scripts start",
+		"build": "react-scripts build && rm -rf release/public && mkdir release/public && mv -v build/* ./release/public && cp release/public/index.html release/public/login.html",
+		"winBuild": "react-scripts build && powershell Remove-Item -Recurse -Force -Confirm:$false ./release/public/* && powershell mv build/* ./release/public && powershell cp release/public/index.html release/public/login.html",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"server-setup": "cd server && npm install ",
+		"server-start": "cd server && npm run serve",
+		"server-docker-start": "cd server && npm run serve:docker",
+		"server-stop": "cd server && npm run stop"
+	},
+	"browserslist": {
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		],
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		]
+	},
+	"dependencies": {
+		"@chakra-ui/react": "2.8.2",
+		"@emotion/react": "^11.9.3",
+		"@emotion/styled": "^11.9.3",
+		"@jridgewell/gen-mapping": "0.3.5",
+		"ajv": "^8.16.0",
+		"axios": "^1.6.5",
+		"cors": "^2.8.5",
+		"express": "^4.18.1",
+		"filesize": "^9.0.11",
+		"framer-motion": "^6",
+		"fuzzyset.js": "^1.0.7",
+		"http-proxy-middleware": "^2.0.6",
+		"iso-639-1": "^2.1.15",
+		"js-cookie": "^3.0.1",
+		"morgan": "^1.10.0",
+		"moviedb-promise": "^3.1.18",
+		"react": "18.2.0",
+		"react-activity-rings": "^1.1.0",
+		"react-device-detect": "^2.2.2",
+		"react-dom": "18.2.0",
+		"react-ga": "^3.3.1",
+		"react-icons": "^4.3.1",
+		"react-query": "^3.39.3",
+		"react-router-dom": "^6.2.2",
+		"react-scripts": "5.0.0",
+		"react-virtualized": "^9.22.3",
+		"usehooks-ts": "^2.4.2",
+		"web-vitals": "^2.1.0"
+	},
+	"devDependencies": {
+		"@ianvs/prettier-plugin-sort-imports": "^4.4.2",
+		"@types/fuzzyset.js": "^0.0.2",
+		"@types/jest": "^27.0.1",
+		"@types/js-cookie": "^3.0.1",
+		"@types/node": "^16.7.13",
+		"@types/react": "18.0.15",
+		"@types/react-dom": "18.0.6",
+		"@types/react-virtualized": "^9.21.21",
+		"oxlint": "^1.2.0",
+		"prettier": "^2.8.8",
+		"typescript": "^4.4.2"
+	},
+	"resolutions": {
+		"@types/react": "18.0.7",
+		"@types/react-dom": "18.0.6"
+	}
 }

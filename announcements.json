@@ -1,126 +1,126 @@
 {
-  "schema": {
-    "id": "string",
-    "title": "string",
-    "body": "string",
-    "type": "'success' | 'error' | 'warning' | 'info'",
-    "newUser": "Show to all new users (should be false most times)"
-  },
-  "announcements": [
-    {
-      "id": "Apr112024",
-      "title": "Feature – Select Category on Search",
-      "body": "You can now select a category when downloading torrents from search",
-      "type": "info"
-    },
-    {
-      "id": "Apr032024",
-      "title": "Bug Fix – Start/Pause",
-      "body": "Fixed a start/pause bug with an unexpected status being used by qbittorrent",
-      "type": "warning"
-    },
-    {
-      "id": "Dec062024",
-      "title": "Bug Fix – New status broke app",
-      "body": "Fixed a bug with an unexpected status being used by qbittorrent",
-      "type": "warning"
-    },
-    {
-      "id": "Mar192024",
-      "title": "Bug Fix – Auto management not working",
-      "body": "Fixed a bug introduced in last update where auto management was not applied for new torrents. Thanks for the reports @CharlosMartinez & @Martzki",
-      "type": "warning"
-    },
-    {
-      "id": "Jan112024",
-      "title": "Thanks @Drun555 in Github",
-      "body": "Added some more options to Torrent download preferences for sequencing, auto management, and more.",
-      "type": "info"
-    },
-    {
-      "id": "Jul142023",
-      "title": "Thanks @VishveshC in Github",
-      "body": "Updated the build process to include a login.html file",
-      "type": "info"
-    },
-    {
-      "id": "Jan172023",
-      "title": "Thanks @AdamSEY in Github",
-      "body": "They added Top 100 tab in trending and file size info when searching with plugins",
-      "type": "info"
-    },
-    {
-      "id": "Jan032023",
-      "title": "API Call Fixes",
-      "body": "If you were stuck on 4.4.4 because some of the functionality was broken. This update is fixing that :)",
-      "type": "info"
-    },
-    {
-      "id": "Oct192022",
-      "title": "Custom Tabs Update",
-      "body": "Added way to hide/change the botton tabs visible on mobile",
-      "type": "info"
-    },
-    {
-      "id": "Oct022022",
-      "title": "Font Size Update",
-      "body": "Added a setting page for adjusting the app's font size",
-      "type": "info"
-    },
-    {
-      "id": "Sep272022",
-      "title": "Download Filters Update",
-      "body": "Added some filters to the download tab.",
-      "type": "info"
-    },
-    {
-      "id": "Sep262022",
-      "title": "Trending Tab Update",
-      "body": "Added Trending Tab to show movies and tv shows currently trending according to TMDB.",
-      "type": "info"
-    },
-    {
-      "id": "Sep182022",
-      "title": "Update",
-      "body": "Pushed a couple UI fixes and an attempt at whitelisted IP authentication",
-      "type": "info"
-    },
-    {
-      "id": "Sep082022",
-      "title": "Plugin Search",
-      "body": "qBitTorrent Plugin Search. You can also manage plugins and add public plugins directly from the WebUI.",
-      "type": "info"
-    },
-    {
-      "id": "Sep052022",
-      "title": "Fixes",
-      "body": "Fixing incompatibilities with qBitTorrent 4.4.4. If you spot anything not working, please create an issue. Coming soon: Plugin Search",
-      "type": "warning"
-    },
-    {
-      "id": "Aug242022",
-      "title": "More Updates",
-      "body": "Added rarbg as provider. Deployed my own proxy. Added GA.",
-      "type": "info"
-    },
-    {
-      "id": "Aug192022",
-      "title": "Torrent Information",
-      "body": "Feast your eyes on data from your downloads. (Please request any data points that you'd like if they're not there)",
-      "type": "info"
-    },
-    {
-      "id": "Aug172022b",
-      "title": "New Updates in Repo",
-      "body": "Standalone server (run iQbit on its own port, cool for targeting mobile devices only), torrent rename, torrent name popover on tap",
-      "type": "info"
-    },
-    {
-      "id": "welcome",
-      "title": "Welcome to iQbit",
-      "body": "Welcome to the new iQbit. Whenever new updates are pushed to the repo, you'll get notifications like these in the WebUI.",
-      "type": "info",
-      "newUser": true
-    }
-  ]
+	"schema": {
+		"id": "string",
+		"title": "string",
+		"body": "string",
+		"type": "'success' | 'error' | 'warning' | 'info'",
+		"newUser": "Show to all new users (should be false most times)"
+	},
+	"announcements": [
+		{
+			"id": "Apr112024",
+			"title": "Feature – Select Category on Search",
+			"body": "You can now select a category when downloading torrents from search",
+			"type": "info"
+		},
+		{
+			"id": "Apr032024",
+			"title": "Bug Fix – Start/Pause",
+			"body": "Fixed a start/pause bug with an unexpected status being used by qbittorrent",
+			"type": "warning"
+		},
+		{
+			"id": "Dec062024",
+			"title": "Bug Fix – New status broke app",
+			"body": "Fixed a bug with an unexpected status being used by qbittorrent",
+			"type": "warning"
+		},
+		{
+			"id": "Mar192024",
+			"title": "Bug Fix – Auto management not working",
+			"body": "Fixed a bug introduced in last update where auto management was not applied for new torrents. Thanks for the reports @CharlosMartinez & @Martzki",
+			"type": "warning"
+		},
+		{
+			"id": "Jan112024",
+			"title": "Thanks @Drun555 in Github",
+			"body": "Added some more options to Torrent download preferences for sequencing, auto management, and more.",
+			"type": "info"
+		},
+		{
+			"id": "Jul142023",
+			"title": "Thanks @VishveshC in Github",
+			"body": "Updated the build process to include a login.html file",
+			"type": "info"
+		},
+		{
+			"id": "Jan172023",
+			"title": "Thanks @AdamSEY in Github",
+			"body": "They added Top 100 tab in trending and file size info when searching with plugins",
+			"type": "info"
+		},
+		{
+			"id": "Jan032023",
+			"title": "API Call Fixes",
+			"body": "If you were stuck on 4.4.4 because some of the functionality was broken. This update is fixing that :)",
+			"type": "info"
+		},
+		{
+			"id": "Oct192022",
+			"title": "Custom Tabs Update",
+			"body": "Added way to hide/change the botton tabs visible on mobile",
+			"type": "info"
+		},
+		{
+			"id": "Oct022022",
+			"title": "Font Size Update",
+			"body": "Added a setting page for adjusting the app's font size",
+			"type": "info"
+		},
+		{
+			"id": "Sep272022",
+			"title": "Download Filters Update",
+			"body": "Added some filters to the download tab.",
+			"type": "info"
+		},
+		{
+			"id": "Sep262022",
+			"title": "Trending Tab Update",
+			"body": "Added Trending Tab to show movies and tv shows currently trending according to TMDB.",
+			"type": "info"
+		},
+		{
+			"id": "Sep182022",
+			"title": "Update",
+			"body": "Pushed a couple UI fixes and an attempt at whitelisted IP authentication",
+			"type": "info"
+		},
+		{
+			"id": "Sep082022",
+			"title": "Plugin Search",
+			"body": "qBitTorrent Plugin Search. You can also manage plugins and add public plugins directly from the WebUI.",
+			"type": "info"
+		},
+		{
+			"id": "Sep052022",
+			"title": "Fixes",
+			"body": "Fixing incompatibilities with qBitTorrent 4.4.4. If you spot anything not working, please create an issue. Coming soon: Plugin Search",
+			"type": "warning"
+		},
+		{
+			"id": "Aug242022",
+			"title": "More Updates",
+			"body": "Added rarbg as provider. Deployed my own proxy. Added GA.",
+			"type": "info"
+		},
+		{
+			"id": "Aug192022",
+			"title": "Torrent Information",
+			"body": "Feast your eyes on data from your downloads. (Please request any data points that you'd like if they're not there)",
+			"type": "info"
+		},
+		{
+			"id": "Aug172022b",
+			"title": "New Updates in Repo",
+			"body": "Standalone server (run iQbit on its own port, cool for targeting mobile devices only), torrent rename, torrent name popover on tap",
+			"type": "info"
+		},
+		{
+			"id": "welcome",
+			"title": "Welcome to iQbit",
+			"body": "Welcome to the new iQbit. Whenever new updates are pushed to the repo, you'll get notifications like these in the WebUI.",
+			"type": "info",
+			"newUser": true
+		}
+	]
 }

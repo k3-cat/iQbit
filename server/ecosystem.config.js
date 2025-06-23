@@ -1,8 +1,8 @@
 module.exports = {
-  apps: [
-    {
-      name: "iQbit Standalone Server",
-      script: "./server.js",
-    },
-  ],
+	apps: [
+		{
+			name: "iQbit Standalone Server",
+			script: "./server.js",
+		},
+	],
 };
