@@ -88,7 +88,7 @@ const CategoriesPage = () => {
 		<>
 			{isLarge || isPage ? (
 				<PageHeader
-					title={"Categories"}
+					title="Categories"
 					onAddButtonClick={() => {
 						setSelectedCategory({ mode: "Add", cat: addCategoryObject });
 						editDisclosure.onOpen();
@@ -105,25 +105,25 @@ const CategoriesPage = () => {
 			{Object.values(data || {}).map((cat, index) => (
 				<Flex
 					key={index}
-					shadow={"lg"}
+					shadow="lg"
 					p={5}
-					rounded={"2xl"}
+					rounded="2xl"
 					mt={4}
-					justifyContent={"space-between"}
-					alignItems={"center"}
+					justifyContent="space-between"
+					alignItems="center"
 					bgColor={backgroundColor}
 				>
-					<Flex flexDirection={"column"}>
-						<Heading size={"lg"}>{cat.name}</Heading>
-						<Text noOfLines={1} color={"grayAlpha.800"}>
+					<Flex flexDirection="column">
+						<Heading size="lg">{cat.name}</Heading>
+						<Text noOfLines={1} color="grayAlpha.800">
 							{cat.savePath}
 						</Text>
 					</Flex>
 					<Button
-						variant={"ghost"}
-						fontSize={"md"}
-						colorScheme={"blue"}
-						minHeight={"100%"}
+						variant="ghost"
+						fontSize="md"
+						colorScheme="blue"
+						minHeight="100%"
 						onClick={() => {
 							setSelectedCategory({ mode: "Edit", cat });
 							editDisclosure.onOpen();
@@ -135,11 +135,11 @@ const CategoriesPage = () => {
 			))}
 
 			<IosBottomSheet title={`${selectedCategory.mode} Category`} disclosure={editDisclosure}>
-				<Flex flexDirection={"column"} gap={5}>
+				<Flex flexDirection="column" gap={5}>
 					<FormControl>
 						<FormLabel>Category Name</FormLabel>
 						{selectedCategory.mode === "Edit" ? (
-							<Heading size={"lg"}>{selectedCategory.cat.name}</Heading>
+							<Heading size="lg">{selectedCategory.cat.name}</Heading>
 						) : (
 							<Input value={selectedCategory.cat.name} onChange={(event) => updateCategoryField("name", event.target.value)} />
 						)}
@@ -147,7 +147,7 @@ const CategoriesPage = () => {
 					<FormControl>
 						<FormLabel>Category Save Path</FormLabel>
 						<Input value={selectedCategory.cat.savePath} onChange={(event) => updateCategoryField("savePath", event.target.value)} />
-						<FormHelperText display={"flex"} alignItems={"center"} gap={2}>
+						<FormHelperText display="flex" alignItems="center" gap={2}>
 							<Text>Default:</Text>
 							<Tag>{settings?.save_path}</Tag>
 						</FormHelperText>
@@ -155,9 +155,9 @@ const CategoriesPage = () => {
 					<Flex gap={3} mt={10}>
 						{selectedCategory.mode === "Edit" && (
 							<Button
-								size={"lg"}
-								colorScheme={"red"}
-								variant={"ghost"}
+								size="lg"
+								colorScheme="red"
+								variant="ghost"
 								isLoading={removeCategoryLoading}
 								onClick={() => removeCategory(selectedCategory.cat.name)}
 							>
@@ -168,10 +168,10 @@ const CategoriesPage = () => {
 							<Button
 								isLoading={saveCategoryLoading}
 								disabled={!selectedCategory.cat.name || !selectedCategory.cat.savePath}
-								type={"submit"}
-								colorScheme={"blue"}
-								width={"100%"}
-								size={"lg"}
+								type="submit"
+								colorScheme="blue"
+								width="100%"
+								size="lg"
 								onClick={() => saveCategory()}
 							>
 								{selectedCategory.mode === "Add" ? "Add" : "Save"} Category

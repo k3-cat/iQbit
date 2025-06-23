@@ -67,12 +67,12 @@ const FontSizeSelection = (props: FontSizeSelectionProps) => {
 	return (
 		<>
 			{isLarge && <PageHeader title={"Font Size"} />}
-			<Flex flexDirection={"column"} gap={5}>
+			<Flex flexDirection="column" gap={5}>
 				<FormControl>
-					<Flex justifyContent={"space-between"}>
+					<Flex justifyContent="space-between">
 						<FormLabel>Select Font Size</FormLabel>
 						{value !== 100 && (
-							<Button variant={"ghost"} size={"xs"} colorScheme={"blue"} onClick={() => onChange(100)}>
+							<Button variant="ghost" size="xs" colorScheme="blue" onClick={() => onChange(100)}>
 								Reset Default
 							</Button>
 						)}
@@ -86,7 +86,7 @@ const FontSizeSelection = (props: FontSizeSelectionProps) => {
 							))}
 						</optgroup>
 						<optgroup label={"Enter your own size"}>
-							<option value={"Custom"}>Custom</option>
+							<option value="Custom">Custom</option>
 						</optgroup>
 					</Select>
 					<FormHelperText>Preset sizes are applied immediately.</FormHelperText>
@@ -95,9 +95,9 @@ const FontSizeSelection = (props: FontSizeSelectionProps) => {
 					<FormControl>
 						<FormLabel>Enter Custom Scale</FormLabel>
 						<Flex gap={3}>
-							<Input type={"number"} value={customValue} onChange={(e) => setCustomValue(parseInt(e.target.value))} />
+							<Input type="number" value={customValue} onChange={(e) => setCustomValue(parseInt(e.target.value))} />
 							<LightMode>
-								<Button colorScheme={"blue"} px={8} onClick={() => onChange(customValue)}>
+								<Button colorScheme="blue" px={8} onClick={() => onChange(customValue)}>
 									Apply
 								</Button>
 							</LightMode>

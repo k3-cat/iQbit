@@ -28,16 +28,16 @@ const PageHeader = (props: PageHeaderProps) => {
 			pt={!isLarge ? 5 : headerInBox ? 0 : 5}
 			pb={shouldBeBigHeader ? 5 : 2}
 			px={shouldBeBigHeader ? 5 : 0}
-			width={"100%"}
-			justifyContent={"space-between"}
-			zIndex={"docked"}
+			width="100%"
+			justifyContent="space-between"
+			zIndex="docked"
 			backdropFilter={shouldBeBigHeader ? "blur(15px)" : undefined}
-			alignItems={"center"}
+			alignItems="center"
 			bgColor={shouldBeBigHeader ? BgColor : undefined}
 		>
-			<Flex gap={2} alignItems={"center"}>
+			<Flex gap={2} alignItems="center">
 				{props.onBackButtonPress && (
-					<Button variant={"ghost"} onClick={() => props.onBackButtonPress && props.onBackButtonPress()} width={12} h={12} p={1}>
+					<Button variant="ghost" onClick={() => props.onBackButtonPress && props.onBackButtonPress()} width={12} h={12} p={1}>
 						<IoChevronBack size={25} />
 					</Button>
 				)}
@@ -48,20 +48,20 @@ const PageHeader = (props: PageHeaderProps) => {
 			<LightMode>
 				{props?.onAddButtonClick && (
 					<Button
-						position={"relative"}
-						rounded={"100%"}
+						position="relative"
+						rounded="100%"
 						width={12}
 						height={12}
-						colorScheme={"blue"}
+						colorScheme="blue"
 						onClick={props.onAddButtonClick}
-						role={"group"}
+						role="group"
 					>
 						<Text
-							position={"absolute"}
-							right={"110%"}
+							position="absolute"
+							right="110%"
 							mr={3}
-							color={"blue.500"}
-							fontWeight={"semibold"}
+							color="blue.500"
+							fontWeight="semibold"
 							opacity={0}
 							_groupHover={{ opacity: isLarge ? 1 : 0 }}
 						>

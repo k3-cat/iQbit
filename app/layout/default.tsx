@@ -58,42 +58,42 @@ const DefaultLayout = (props: PropsWithChildren<DefaultLayoutProps>) => {
 
 	return (
 		<Box backgroundColor={fakeBodyBg}>
-			<Box backgroundColor={fakeBodyBg} position={"fixed"} height={"100vh"} width={"100vw"} zIndex={-1} />
+			<Box backgroundColor={fakeBodyBg} position="fixed" height="100vh" width="100vw" zIndex={-1} />
 			{isTouchDevice && (
 				<Box
 					zIndex={scroll > 15 ? 1000 : -1}
-					h={"60px"}
-					top={"-60px"}
-					mb={"-60px"}
-					// transform={"translateY(-60px)"}
-					position={"sticky"}
-					w={"100vw"}
-					backgroundColor={"blackAlpha.500"}
-					backdropFilter={"blur(15px)"}
+					h="60px"
+					top="-60px"
+					mb="-60px"
+					// transform="translateY(-60px)"
+					position="sticky"
+					w="100vw"
+					backgroundColor="blackAlpha.500"
+					backdropFilter="blur(15px)"
 					opacity={isTouchDevice ? (scroll - 30) * 0.01 * 0.6 : 0}
 				/>
 			)}
-			<Flex gap={isLarge ? 10 : undefined} as={"main"} mb={"30vh"} px={5}>
-				<Box maxWidth={isLarge ? "400px" : undefined} width={"100%"}>
+			<Flex gap={isLarge ? 10 : undefined} as="main" mb="30vh" px={5}>
+				<Box maxWidth={isLarge ? "400px" : undefined} width="100%">
 					{isLarge ? <Home /> : props.children}
 				</Box>
 				{isLarge && (
 					<Flex
 						flexGrow={1}
 						mt={6}
-						as={"aside"}
+						as="aside"
 						backgroundColor={largeWorkAreaBgColor}
 						height={"calc(100vh - 150px)"}
-						shadow={"lg"}
+						shadow="lg"
 						rounded={12}
-						overflow={"hidden"}
-						position={"fixed"}
-						top={"90px"}
+						overflow="hidden"
+						position="fixed"
+						top="90px"
 						width={"calc(100% - 470px)"}
-						left={"450px"}
+						left="450px"
 					>
-						<Flex flexDirection={"column"} backgroundColor={"grayAlpha.300"} height={"100%"} justifyContent={"space-between"} p={5}>
-							<Flex flexDirection={"column"} justifyContent={"flex-start"} gap={2}>
+						<Flex flexDirection="column" backgroundColor="grayAlpha.300" height="100%" justifyContent="space-between" p={5}>
+							<Flex flexDirection="column" justifyContent="flex-start" gap={2}>
 								{Pages.filter((page) => page.visibleOn.includes("sideNav")).map(({ url, Icon, label }) => (
 									<NavButton
 										key={url}
@@ -110,7 +110,7 @@ const DefaultLayout = (props: PropsWithChildren<DefaultLayoutProps>) => {
 									/>
 								))}
 							</Flex>
-							<Flex flexDirection={"column"} justifyContent={"flex-start"} gap={2}>
+							<Flex flexDirection="column" justifyContent="flex-start" gap={2}>
 								{Pages.filter((page) => page.visibleOn.includes("sideNavBottom")).map(({ url, Icon, label }) => (
 									<NavButton
 										key={url}
@@ -127,20 +127,12 @@ const DefaultLayout = (props: PropsWithChildren<DefaultLayoutProps>) => {
 									/>
 								))}
 								<Divider my={2} />
-								<Button
-									variant={"ghost"}
-									colorScheme={"red"}
-									size={"xs"}
-									fontWeight={"normal"}
-									fontSize={"sm"}
-									textAlign={"left"}
-									onClick={logout}
-								>
+								<Button variant="ghost" colorScheme="red" size="xs" fontWeight="normal" fontSize="sm" textAlign="left" onClick={logout}>
 									Log Out
 								</Button>
 							</Flex>
 						</Flex>
-						<Flex flexDirection={"column"} height={"100%"} p={5} flexGrow={2} overflowY={"auto"} overflowX={"hidden"}>
+						<Flex flexDirection="column" height="100%" p={5} flexGrow={2} overflowY="auto" overflowX="hidden">
 							{pathname === "/" ? Pages.filter((page) => page.label === "Search")[0].component : props.children}
 						</Flex>
 					</Flex>
@@ -148,10 +140,10 @@ const DefaultLayout = (props: PropsWithChildren<DefaultLayoutProps>) => {
 			</Flex>
 			{!isLarge && (
 				<SimpleGrid
-					as={"nav"}
+					as="nav"
 					columns={(tabsSelected?.filter((curr) => !!curr).length || 0) + 2}
-					width={"100%"}
-					position={"fixed"}
+					width="100%"
+					position="fixed"
 					bottom={0}
 					bgColor={BgColor}
 					borderTop={"1px solid"}

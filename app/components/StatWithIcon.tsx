@@ -6,14 +6,14 @@ export const StatWithIcon = ({ icon, label, lit, loading }: { icon: ReactNode; l
 	const TextLitColor = useColorModeValue("gray.700", "whiteAlpha.900");
 
 	return (
-		<Flex alignItems={"center"} justifyContent={{ base: "center", lg: "flex-start" }}>
+		<Flex alignItems="center" justifyContent={{ base: "center", lg: "flex-start" }}>
 			<Box color={lit ? "blue.500" : lit !== undefined ? "grayAlpha.500" : undefined}>{icon}</Box>
 			{loading ? (
-				<Spinner size={"sm"} ml={1} />
+				<Spinner size="sm" ml={1} />
 			) : (
-				<Text ml={1} fontWeight={400} noOfLines={1} fontSize={"md"} color={lit ? TextLitColor : lit !== undefined ? TextColor : undefined}>
+				<Text ml={1} fontWeight={400} noOfLines={1} fontSize="md" color={lit ? TextLitColor : lit !== undefined ? TextColor : undefined}>
 					{label || (
-						<Text as={"span"} color={TextColor}>
+						<Text as="span" color={TextColor}>
 							N/A
 						</Text>
 					)}

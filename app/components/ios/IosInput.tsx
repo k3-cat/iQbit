@@ -40,7 +40,7 @@ const IosInput = (props: InputProps) => {
 			</InputLeftAddon>
 			<Input
 				type={showTextInPassword ? "password" : "text"}
-				autoCapitalize={"off"}
+				autoCapitalize="off"
 				value={props.value}
 				onChange={(e) => props.onChange(e.target.value)}
 				_focus={{
@@ -53,7 +53,7 @@ const IosInput = (props: InputProps) => {
 				borderLeft="none"
 				borderRight="none"
 				borderWidth={1}
-				borderColor={"grayAlpha.500"}
+				borderColor="grayAlpha.500"
 				borderBottomRadius={props.first ? 0 : undefined}
 				borderTopRadius={props.last ? 0 : undefined}
 				marginTop={!props.first ? -0.5 : undefined}
@@ -65,14 +65,14 @@ const IosInput = (props: InputProps) => {
 				{...sharedAddonProps}
 				width={20}
 				px={2}
-				borderLeft={"none"}
+				borderLeft="none"
 				borderBottomStyle={!props.last ? "none" : undefined}
 				borderBottomRadius={props.first ? 0 : undefined}
 				borderTopRadius={props.last ? 0 : undefined}
 				marginTop={!props.first ? -0.5 : undefined}
 			>
 				{props.password && (
-					<Button my={1} size={"sm"} onClick={toggle} variant={"ghost"} colorScheme={"alphaGray"}>
+					<Button my={1} size="sm" onClick={toggle} variant="ghost" colorScheme="alphaGray">
 						{showTextInPassword ? <IoEye /> : <IoEyeOff />}
 					</Button>
 				)}

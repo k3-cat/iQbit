@@ -50,21 +50,12 @@ export function useFilterState(): useFilterStateReturn {
 }
 
 export const FilterHeading = ({ disclosure, indicator }: { disclosure: UseDisclosureReturn; indicator?: number }) => (
-	<Flex
-		p={5}
-		as={"button"}
-		onClick={disclosure.onToggle}
-		width={"100%"}
-		rounded={6}
-		alignItems={"center"}
-		justifyContent={"space-between"}
-		gap={2}
-	>
-		<Heading as={"span"} size={"sm"}>
+	<Flex p={5} as="button" onClick={disclosure.onToggle} width="100%" rounded={6} alignItems="center" justifyContent="space-between" gap={2}>
+		<Heading as="span" size="sm">
 			Filters
 			<LightMode>
 				{indicator ? (
-					<Badge bgColor={"blue.500"} color={"white"} ml={3}>
+					<Badge bgColor="blue.500" color="white" ml={3}>
 						{indicator}
 					</Badge>
 				) : null}
@@ -81,10 +72,10 @@ const Filters = (state: useFilterStateReturn) => {
 	const inputSizes = { base: "md", lg: "sm" };
 
 	return (
-		<Box bgColor={backgroundColor} rounded={6} width={"100%"}>
+		<Box bgColor={backgroundColor} rounded={6} width="100%">
 			<FilterHeading disclosure={filterDisclosure} />
 			<Flex px={4} pb={4} hidden={!filterDisclosure.isOpen} mt={3} gap={5} wrap={{ base: "wrap", lg: "nowrap" }}>
-				<Flex width={"100%"}>
+				<Flex width="100%">
 					{smartMap([...qualities], (qual, { isLast, isFirst }) => (
 						<Button
 							key={qual}
@@ -92,7 +83,7 @@ const Filters = (state: useFilterStateReturn) => {
 							size={inputSizes}
 							variant={state.qualitySelected !== qual ? "outline" : undefined}
 							isActive={state.qualitySelected === qual}
-							colorScheme={"blue"}
+							colorScheme="blue"
 							roundedRight={isFirst ? 0 : undefined}
 							roundedLeft={isLast ? 0 : undefined}
 							rounded={!isFirst && !isLast ? 0 : undefined}
@@ -103,7 +94,7 @@ const Filters = (state: useFilterStateReturn) => {
 					))}
 				</Flex>
 				<Select
-					width={"100%"}
+					width="100%"
 					size={inputSizes}
 					placeholder={"Filter Sources..."}
 					value={state.selectedSource}
@@ -113,9 +104,9 @@ const Filters = (state: useFilterStateReturn) => {
 						<option key={index}>{source}</option>
 					))}
 				</Select>
-				<Flex gap={2} alignItems={"center"} width={{ base: "100%", lg: "70%" }}>
-					<Text whiteSpace={"nowrap"}>Min Seeds</Text>
-					<Input min={0} type={"number"} size={inputSizes} value={state.minSeeds} onChange={(e) => state.setMinSeeds(e.target.value)} />
+				<Flex gap={2} alignItems="center" width={{ base: "100%", lg: "70%" }}>
+					<Text whiteSpace="nowrap">Min Seeds</Text>
+					<Input min={0} type="number" size={inputSizes} value={state.minSeeds} onChange={(e) => state.setMinSeeds(e.target.value)} />
 				</Flex>
 			</Flex>
 		</Box>

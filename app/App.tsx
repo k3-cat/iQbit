@@ -137,7 +137,7 @@ function App() {
 	});
 
 	return (
-		<ChakraProvider theme={theme} cssVarsRoot={"body"}>
+		<ChakraProvider theme={theme} cssVarsRoot="body">
 			<QueryClientProvider client={queryClient}>
 				<FontSizeProvider>
 					<AnnouncementChecker>

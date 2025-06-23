@@ -26,13 +26,13 @@ const NavButton = (props: NavButtonProps) => {
 
 				return (
 					<Button
-						display={"flex"}
+						display="flex"
 						flexDirection={isLarge ? "row" : "column"}
-						variant={"ghost"}
+						variant="ghost"
 						minHeight={isLarge ? undefined : 20}
 						pb={isLarge ? undefined : 6}
 						height={isLarge ? 8 : undefined}
-						width={"100%"}
+						width="100%"
 						rounded={isLarge ? 5 : 0}
 						bgColor={isLarge && isActive ? "grayAlpha.300" : "transparent"}
 						_hover={{ bgColor: !isLarge ? "transparent" : undefined }}
@@ -41,7 +41,7 @@ const NavButton = (props: NavButtonProps) => {
 					>
 						{isActive ? props.icon.active : props.icon.inactive}
 						<Text
-							width={"100%"}
+							width="100%"
 							color={isActive ? props.activeColor : undefined}
 							mt={isLarge ? 0 : 1}
 							ml={isLarge ? 2 : 0}

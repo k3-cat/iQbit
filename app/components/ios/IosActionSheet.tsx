@@ -3,7 +3,6 @@ import { IoCheckmark } from "react-icons/io5";
 import {
 	Box,
 	Button,
-	type ButtonProps,
 	Drawer,
 	DrawerBody,
 	DrawerContent,
@@ -15,6 +14,7 @@ import {
 	MenuItem,
 	MenuList,
 	useColorModeValue,
+	type ButtonProps,
 	type UseDisclosureReturn,
 } from "@chakra-ui/react";
 
@@ -57,9 +57,9 @@ function IosActionSheet<Y>({ options, disclosure, trigger }: PropsWithChildren<I
 	return largeScreen ? (
 		<>
 			{trigger}
-			<Menu isOpen={disclosure.isOpen} onClose={disclosure.onClose} placement={"left-start"}>
-				<MenuButton position={"absolute"} />
-				<MenuList py={0} rounded={12} overflow={"hidden"} bgColor={DropdownButtonBgColor}>
+			<Menu isOpen={disclosure.isOpen} onClose={disclosure.onClose} placement="left-start">
+				<MenuButton position="absolute" />
+				<MenuList py={0} rounded={12} overflow="hidden" bgColor={DropdownButtonBgColor}>
 					{options.reverse().map((option, index, array) => (
 						<MenuItem
 							key={index}
@@ -71,7 +71,7 @@ function IosActionSheet<Y>({ options, disclosure, trigger }: PropsWithChildren<I
 								option.onClick();
 							}}
 							color={option?.danger ? "red.500" : "blue.500"}
-							justifyContent={"space-between"}
+							justifyContent="space-between"
 							bgColor={ButtonBgColor}
 							_hover={{
 								bgColor: ButtonBgColorHover,
@@ -79,7 +79,7 @@ function IosActionSheet<Y>({ options, disclosure, trigger }: PropsWithChildren<I
 						>
 							{option.label}
 							{option.checked && (
-								<Icon fontSize={"x-large"} ml={3}>
+								<Icon fontSize="x-large" ml={3}>
 									<IoCheckmark />
 								</Icon>
 							)}
@@ -91,11 +91,11 @@ function IosActionSheet<Y>({ options, disclosure, trigger }: PropsWithChildren<I
 	) : (
 		<>
 			<Box onClick={disclosure.onToggle}>{trigger}</Box>
-			<Drawer placement={"bottom"} onClose={disclosure.onClose} isOpen={disclosure.isOpen || false}>
-				<DrawerOverlay zIndex={"modal"} />
-				<DrawerContent pb={8} bgColor={"transparent"} justifyContent={"center"}>
-					<DrawerBody maxWidth={"700px"} justifySelf={"center"} mx={"auto"} width={"100%"}>
-						<Flex flexDirection={"column"} gap={0} mb={5} color={"blue.500"} rounded={12} overflow={"hidden"}>
+			<Drawer placement="bottom" onClose={disclosure.onClose} isOpen={disclosure.isOpen || false}>
+				<DrawerOverlay zIndex="modal" />
+				<DrawerContent pb={8} bgColor="transparent" justifyContent="center">
+					<DrawerBody maxWidth="700px" justifySelf="center" mx="auto" width="100%">
+						<Flex flexDirection="column" gap={0} mb={5} color="blue.500" rounded={12} overflow="hidden">
 							{options.map((option, index, array) => (
 								<Button
 									key={index}
@@ -108,18 +108,18 @@ function IosActionSheet<Y>({ options, disclosure, trigger }: PropsWithChildren<I
 										option.onClick();
 									}}
 									color={option?.danger ? "red.500" : "blue.500"}
-									fontWeight={"normal"}
+									fontWeight="normal"
 								>
 									{option.label}
 									{option.checked && (
-										<Icon fontSize={"x-large"} ml={3}>
+										<Icon fontSize="x-large" ml={3}>
 											<IoCheckmark />
 										</Icon>
 									)}
 								</Button>
 							))}
 						</Flex>
-						<Button color={"blue.500"} rounded={12} onClick={disclosure.onClose} fontWeight={"bold"} {...sharedButtonProps}>
+						<Button color="blue.500" rounded={12} onClick={disclosure.onClose} fontWeight="bold" {...sharedButtonProps}>
 							Cancel
 						</Button>
 					</DrawerBody>

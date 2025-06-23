@@ -24,14 +24,14 @@ const SaveAndResetButtons = () => {
 			transform={{ lg: "translateY(var(--chakra-space-5))" }}
 			bottom={{ base: 20, lg: 0 }}
 			zIndex={100}
-			backdropFilter={"blur(5px)"}
+			backdropFilter="blur(5px)"
 			bgColor={BgColor}
 		>
-			<Button width={"100%"} size={"lg"} bgColor={"gray.500"} onClick={reset}>
+			<Button width="100%" size="lg" bgColor="gray.500" onClick={reset}>
 				Reset
 			</Button>
 			<LightMode>
-				<Button width={"100%"} colorScheme={"blue"} size={"lg"} onClick={saveSettings}>
+				<Button width="100%" colorScheme="blue" size="lg" onClick={saveSettings}>
 					Save Changes
 				</Button>
 			</LightMode>

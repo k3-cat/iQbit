@@ -55,10 +55,10 @@ const SearchPlugin = ({ plugin }: { plugin: TorrPlugin }) => {
 	const deleteDisclosure = useDisclosure();
 
 	return (
-		<Box key={plugin.fullName} bgColor={backgroundColor} p={5} rounded={"lg"} w={"100%"}>
-			<Flex justifyContent={"space-between"} alignItems={"center"}>
+		<Box key={plugin.fullName} bgColor={backgroundColor} p={5} rounded="lg" w="100%">
+			<Flex justifyContent="space-between" alignItems="center">
 				<span>
-					<Flex alignItems={"center"} gap={3}>
+					<Flex alignItems="center" gap={3}>
 						<Circle bgColor={plugin.enabled ? "green.500" : "gray.500"} size={4} />
 						<Heading>{plugin.fullName}</Heading>
 					</Flex>
@@ -69,7 +69,7 @@ const SearchPlugin = ({ plugin }: { plugin: TorrPlugin }) => {
 					<IosActionSheet disclosure={deleteDisclosure} options={[{ label: "Confirm Uninstall", onClick: uninstall, danger: true }]} />
 					<IosActionSheet
 						trigger={
-							<Button variant={"ghost"} onClick={pluginOptionsDisclosure.onToggle}>
+							<Button variant="ghost" onClick={pluginOptionsDisclosure.onToggle}>
 								<IoEllipsisVertical size={25} />
 							</Button>
 						}
@@ -111,18 +111,18 @@ const PublicPlugin = ({
 	});
 
 	return (
-		<Box p={4} borderColor={"grayAlpha.400"} borderWidth={1} rounded={5}>
-			<Flex gap={2} alignItems={"center"}>
+		<Box p={4} borderColor="grayAlpha.400" borderWidth={1} rounded={5}>
+			<Flex gap={2} alignItems="center">
 				<Image src={plugin.img} alt={"plugin logo"} w={4} h={4} />
-				<Heading size={"md"}>{plugin.name}</Heading>
+				<Heading size="md">{plugin.name}</Heading>
 			</Flex>
 
-			<Flex columnGap={3} opacity={0.5} flexWrap={"wrap"}>
+			<Flex columnGap={3} opacity={0.5} flexWrap="wrap">
 				<StatWithIcon icon={<IoPerson />} label={plugin.authors?.join(", ")} />
 				<StatWithIcon icon={<IoConstruct />} label={plugin.lastUpdated} />
 				<StatWithIcon icon={<></>} label={"Version " + plugin.version} />
 			</Flex>
-			<Heading size={"sm"} mt={2}>
+			<Heading size="sm" mt={2}>
 				Comments
 			</Heading>
 			<Text>{plugin.comments}</Text>
@@ -132,9 +132,9 @@ const PublicPlugin = ({
 					isDisabled={addLoading || isInstalled}
 					isLoading={addLoading}
 					variant={isInstalled ? "unstyled" : undefined}
-					colorScheme={"blue"}
-					w={"100%"}
-					size={"md"}
+					colorScheme="blue"
+					w="100%"
+					size="md"
 					mt={3}
 					color={isInstalled ? "blue.500" : undefined}
 					onClick={() => {
@@ -147,7 +147,7 @@ const PublicPlugin = ({
 			</LightMode>
 
 			{plugin?.readme && (
-				<Button variant={"ghost"} colorScheme={"blue"} w={"100%"} size={"md"} mt={3}>
+				<Button variant="ghost" colorScheme="blue" w="100%" size="md" mt={3}>
 					View README
 				</Button>
 			)}
@@ -160,13 +160,13 @@ export const SearchPluginsPageQuery = "getPlugins";
 export function MobileSettingsAddButton(props: { addPluginDisclosure: UseDisclosureReturn; onClick?: () => void }) {
 	return (
 		<Button
-			size={"lg"}
-			position={"fixed"}
+			size="lg"
+			position="fixed"
 			top={0}
 			right={5}
 			mt={4}
-			variant={"unstyled"}
-			color={"blue.500"}
+			variant="unstyled"
+			color="blue.500"
 			onClick={() => {
 				props?.onClick && props.onClick();
 				props.addPluginDisclosure.onToggle();
@@ -203,32 +203,32 @@ const SearchPluginsPage = () => {
 	return (
 		<>
 			{isLarge ? (
-				<PageHeader title={"Plugins"} buttonLabel={"Add Plugin"} onAddButtonClick={addPluginDisclosure.onToggle} />
+				<PageHeader title="Plugins" buttonLabel={"Add Plugin"} onAddButtonClick={addPluginDisclosure.onToggle} />
 			) : (
 				<MobileSettingsAddButton addPluginDisclosure={addPluginDisclosure} />
 			)}
-			<Flex gap={2} mt={isLarge ? 5 : 0} w={"100%"} flexDirection={"column"}>
+			<Flex gap={2} mt={isLarge ? 5 : 0} w="100%" flexDirection="column">
 				{data?.map((plugin) => (
 					<SearchPlugin key={plugin.fullName} plugin={plugin} />
 				))}
 			</Flex>
 			<IosBottomSheet title={"Add Plugin"} disclosure={addPluginDisclosure}>
 				<FormControl>
-					<Flex justifyContent={"space-between"} mb={2}>
+					<Flex justifyContent="space-between" mb={2}>
 						<FormLabel mb={0}>Plugin Location</FormLabel>
 						<FormHelperText>Local Path or URL</FormHelperText>
 					</Flex>
 					<Input value={pluginLocation} onChange={(e) => setPluginLocation(e.target.value)} />
 					<LightMode>
-						<Button colorScheme={"blue"} w={"100%"} mt={4} onClick={() => addPlugin()} isLoading={addLoading} isDisabled={addLoading}>
+						<Button colorScheme="blue" w="100%" mt={4} onClick={() => addPlugin()} isLoading={addLoading} isDisabled={addLoading}>
 							Add Plugin
 						</Button>
 					</LightMode>
 					<Button
-						colorScheme={"blue"}
-						w={"100%"}
+						colorScheme="blue"
+						w="100%"
 						mt={4}
-						variant={"ghost"}
+						variant="ghost"
 						onClick={() => {
 							addPluginDisclosure.onClose();
 							publicPluginsDisclosure.onOpen();
@@ -243,7 +243,7 @@ const SearchPluginsPage = () => {
 					The plugins shown as ✖ or ❗ will result in the slowdown and malfunction of other plugins as well, hence the use of these plugins
 					are strongly discouraged.
 				</Text>
-				<Flex gap={3} flexDirection={"column"}>
+				<Flex gap={3} flexDirection="column">
 					{publicPlugins?.map((plugin, key) => {
 						const isInstalled = added?.some((inst) => inst === plugin.link);
 

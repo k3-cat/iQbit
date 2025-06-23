@@ -171,8 +171,8 @@ const Home = () => {
 	return (
 		<VirtualizedWindowScroll>
 			{({ isScrolling, scrollTop, width, height }) => (
-				<Flex flexDirection={"column"} width={"100%"} mt={isLarge ? 24 : 0}>
-					<PageHeader title={"Downloads"} onAddButtonClick={addModalDisclosure.onOpen} buttonLabel={"Add Torrent"} isHomeHeader />
+				<Flex flexDirection="column" width="100%" mt={isLarge ? 24 : 0}>
+					<PageHeader title="Downloads" onAddButtonClick={addModalDisclosure.onOpen} buttonLabel={"Add Torrent"} isHomeHeader />
 
 					<IosBottomSheet title={"Add Torrent"} disclosure={addModalDisclosure}>
 						<VStack gap={4}>
@@ -181,13 +181,13 @@ const Home = () => {
 								<Textarea _disabled={{ bgColor: "gray.50" }} value={textArea} onChange={(e) => setTextArea(e.target.value)} />
 							</FormControl>
 							<FormControl isDisabled={!!textArea} isInvalid={!!fileError}>
-								<Flex justifyContent={"space-between"} alignItems={"center"} mb={2}>
+								<Flex justifyContent="space-between" alignItems="center" mb={2}>
 									<FormLabel mb={0}>{"Add with .torrent file"}</FormLabel>
 									{file && (
 										<Button
-											size={"sm"}
-											variant={"ghost"}
-											colorScheme={"blue"}
+											size="sm"
+											variant="ghost"
+											colorScheme="blue"
 											onClick={(e) => {
 												e.preventDefault();
 												setFile(undefined);
@@ -199,24 +199,24 @@ const Home = () => {
 								</Flex>
 								<Flex
 									gap={4}
-									flexDirection={"column"}
-									alignItems={"center"}
-									justifyContent={"center"}
-									position={"relative"}
+									flexDirection="column"
+									alignItems="center"
+									justifyContent="center"
+									position="relative"
 									borderColor={file ? "green.500" : "blue.500"}
 									borderWidth={1}
-									rounded={"lg"}
+									rounded="lg"
 									bgColor={draggingOver ? "blue.500" : file ? "green.50" : "blue.50"}
 									p={4}
 									color={draggingOver ? "white" : file ? "green.500" : "blue.500"}
 									opacity={!!textArea ? 0.5 : undefined}
 								>
 									<IoDocumentAttach size={40} />
-									<Heading size={"sm"} noOfLines={1}>
+									<Heading size="sm" noOfLines={1}>
 										{draggingOver ? "Drop it" : file ? file.name : "Click or Drag and Drop"}
 									</Heading>
 									<Input
-										accept={".torrent"}
+										accept=".torrent"
 										onDragEnter={() => {
 											if (!!textArea) return;
 											setFileError("");
@@ -227,11 +227,11 @@ const Home = () => {
 										onChange={(e) => e?.target?.files && validateAndSelectFile(e?.target?.files[0])}
 										opacity={0}
 										_disabled={{ opacity: 0 }}
-										type={"file"}
-										position={"absolute"}
+										type="file"
+										position="absolute"
 										top={0}
-										width={"100%"}
-										height={"100%"}
+										width="100%"
+										height="100%"
 									/>
 								</Flex>
 								<FormErrorMessage>{fileError}</FormErrorMessage>
@@ -287,9 +287,9 @@ const Home = () => {
 							<Button
 								disabled={!textArea && !file}
 								isLoading={attemptAddLoading}
-								width={"100%"}
-								size={"lg"}
-								colorScheme={"blue"}
+								width="100%"
+								size="lg"
+								colorScheme="blue"
 								mt={16}
 								onClick={() => attemptAddTorrent({ autoTmm: settings?.auto_tmm_enabled })}
 							>
@@ -298,19 +298,19 @@ const Home = () => {
 						</LightMode>
 					</IosBottomSheet>
 
-					<ButtonGroup my={5} size={"lg"} width={"100%"}>
-						<Button flexGrow={2} leftIcon={<IoPlay />} onClick={() => resumeAll()} variant={"outline"}>
+					<ButtonGroup my={5} size="lg" width="100%">
+						<Button flexGrow={2} leftIcon={<IoPlay />} onClick={() => resumeAll()} variant="outline">
 							{"Start All"}
 						</Button>
-						<Button flexGrow={2} leftIcon={<IoPause />} onClick={() => pauseAll()} variant={"outline"}>
+						<Button flexGrow={2} leftIcon={<IoPause />} onClick={() => pauseAll()} variant="outline">
 							{"Pause All"}
 						</Button>
 					</ButtonGroup>
 
-					<Box bgColor={bgColor} rounded={"lg"} mb={5}>
+					<Box bgColor={bgColor} rounded="lg" mb={5}>
 						<FilterHeading indicator={filterIndicator} disclosure={filterDisclosure} />
 						{filterDisclosure.isOpen && (
-							<Flex flexDirection={"column"} gap={5} px={5} pb={5}>
+							<Flex flexDirection="column" gap={5} px={5} pb={5}>
 								<FormControl>
 									<FormLabel>Search</FormLabel>
 									<Input value={filterSearch} onChange={(e) => setFilterSearch(e.target.value)} />
@@ -339,17 +339,17 @@ const Home = () => {
 						)}
 					</Box>
 
-					<Flex flexDirection={"column"} gap={5}>
+					<Flex flexDirection="column" gap={5}>
 						{isLoading &&
 							Array.from(Array(10).keys()).map((key) => (
 								<TorrentBox key={key} torrentData={randomTorrent} categories={[]} hash={""} loading />
 							))}
 
 						{Torrents.length === 0 && filterIndicator > 0 && (
-							<Flex alignItems={"center"} flexDirection={"column"} gap={4}>
-								<Heading size={"md"}>Could not find any results</Heading>
+							<Flex alignItems="center" flexDirection="column" gap={4}>
+								<Heading size="md">Could not find any results</Heading>
 								<LightMode>
-									<Button onClick={resetFilters} colorScheme={"blue"}>
+									<Button onClick={resetFilters} colorScheme="blue">
 										Reset Filters
 									</Button>
 								</LightMode>

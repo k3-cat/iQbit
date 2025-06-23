@@ -18,18 +18,18 @@ const SegmentedPicker = (props: SegmentedPickerProps) => {
 			mt={3}
 			mb={5}
 			p={2}
-			rounded={"lg"}
-			position={"sticky"}
+			rounded="lg"
+			position="sticky"
 			top={2}
-			zIndex={"sticky"}
-			backdropFilter={"blur(15px)"}
+			zIndex="sticky"
+			backdropFilter="blur(15px)"
 		>
 			{props.options.map((option, index) => (
 				<Button
 					backgroundColor={index === props.selected ? selectedBg : undefined}
 					key={option}
 					onClick={() => props.onSelect(index)}
-					variant={"unstyled"}
+					variant="unstyled"
 					shadow={index === props.selected ? "xl" : undefined}
 				>
 					{option}

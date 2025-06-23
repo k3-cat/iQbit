@@ -9,16 +9,16 @@ const SettingsBox = (props: PropsWithChildren<{ title?: string }>) => {
 	return (
 		<Flex
 			border={props.title ? "2px solid " + borderColor : undefined}
-			flexDirection={"column"}
+			flexDirection="column"
 			shadow={props.title ? shadow : undefined}
 			px={props?.title ? 4 : 0}
 			py={4}
 			mt={props.title ? 4 : 0}
-			rounded={"lg"}
+			rounded="lg"
 			gap={5}
 			backgroundColor={props.title ? backgroundColor : undefined}
 		>
-			<Heading size={"md"}>{props?.title}</Heading>
+			<Heading size="md">{props?.title}</Heading>
 			{props.children}
 		</Flex>
 	);

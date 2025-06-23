@@ -20,17 +20,17 @@ const CategorySelect = ({ category, onSelected }: CategorySelectProps) => {
 
 	return (
 		<>
-			<Flex alignItems={"center"}>
+			<Flex alignItems="center">
 				<Button
 					opacity={category ? "100%" : "50%"}
-					variant={"unstyled"}
-					display={"flex"}
+					variant="unstyled"
+					display="flex"
 					minH={0}
-					height={"auto"}
+					height="auto"
 					rightIcon={<IoChevronDown />}
 					onClick={catDisclosure.onOpen}
 				>
-					<Heading size={"sm"}>{category || "Category"}</Heading>
+					<Heading size="sm">{category || "Category"}</Heading>
 				</Button>
 			</Flex>
 			<IosActionSheet

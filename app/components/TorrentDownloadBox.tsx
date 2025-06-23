@@ -34,16 +34,16 @@ const TorrentDownloadBox = ({ magnetURL, title, onSelect, children, category }: 
 		<Flex
 			p={3}
 			bgColor={bgColor}
-			width={"100%"}
-			justifyContent={"space-between"}
+			width="100%"
+			justifyContent="space-between"
 			rounded={6}
-			alignItems={"center"}
+			alignItems="center"
 			gap={3}
 			wrap={{ base: "wrap", lg: "nowrap" }}
 		>
 			<Box flexGrow={2}>
 				{title && (
-					<Heading wordBreak={"break-all"} size={"md"} mb={2}>
+					<Heading wordBreak="break-all" size="md" mb={2}>
 						{title}
 					</Heading>
 				)}
@@ -55,7 +55,7 @@ const TorrentDownloadBox = ({ magnetURL, title, onSelect, children, category }: 
 						minW={32}
 						disabled={isSuccess || callbackSuccess || callbackLoading || isLoading}
 						isLoading={isLoading || callbackLoading}
-						colorScheme={"blue"}
+						colorScheme="blue"
 						width={!isLarge ? "100%" : undefined}
 						onClick={() => {
 							if (magnetURL) {

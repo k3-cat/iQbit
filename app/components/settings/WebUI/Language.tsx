@@ -11,8 +11,8 @@ const Language = () => {
 	}));
 
 	return (
-		<SettingsBox title={"Language"}>
-			<SettingsSelect label={"User Interface Language"} settingKey={"locale"} options={options} helperText={"Has no effect on iQbit"} />
+		<SettingsBox title="Language">
+			<SettingsSelect label={"User Interface Language"} settingKey="locale" options={options} helperText={"Has no effect on iQbit"} />
 		</SettingsBox>
 	);
 };

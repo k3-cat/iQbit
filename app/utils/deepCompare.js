@@ -98,9 +98,9 @@ export function deepCompare(a, b, enforce_properties_order, cyclic) {
 				return a // a is Non-zero and Non-NaN
 					? a === b
 					: // a is 0, -0 or NaN
-					a === a // a is 0 or -O
-					? 1 / a === 1 / b // 1/0 !== 1/-0 because Infinity !== -Infinity
-					: b !== b; // NaN, the only Number not equal to itself!
+						a === a // a is 0 or -O
+						? 1 / a === 1 / b // 1/0 !== 1/-0 because Infinity !== -Infinity
+						: b !== b; // NaN, the only Number not equal to itself!
 			// [object Number]
 
 			case "[object RegExp]":

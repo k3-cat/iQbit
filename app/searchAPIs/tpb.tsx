@@ -150,10 +150,10 @@ const TPBSearch = (props: SearchProviderComponentProps) => {
 				onSearch={search}
 				placeholder={`Search ${props.category}...`}
 			/>
-			<Flex flexDirection={"column"} gap={2} width={"100%"}>
+			<Flex flexDirection="column" gap={2} width="100%">
 				{(!data?.length || true) && <Filters {...props.filterState} />}
 				{data && (
-					<SectionSM title={"Results"} titleRight={<CategorySelect category={addToCategory} onSelected={setAddToCategory} />}>
+					<SectionSM title="Results" titleRight={<CategorySelect category={addToCategory} onSelected={setAddToCategory} />}>
 						{filteredMovies.map((torr) => (
 							<TorrentDownloadBox key={torr.info_hash} title={torr.name} magnetURL={torr.info_hash} category={addToCategory}>
 								{props.category === "Video" && (

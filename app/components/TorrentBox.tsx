@@ -140,26 +140,26 @@ const TorrentBox = ({ torrentData, hash, categories, loading, style }: TorrentBo
 
 	const memoizedLoading = useMemo(
 		() => (
-			<Box shadow={BoxShadow} px={5} py={4} rounded={"xl"} bgColor={"grayAlpha.200"}>
+			<Box shadow={BoxShadow} px={5} py={4} rounded="xl" bgColor="grayAlpha.200">
 				<Skeleton height={5} width={(Math.random() * (100 - 40) + 40).toString() + "%"} />
 				<Flex mt={2} gap={2}>
 					<Skeleton height={4} width={24} />
 					<Skeleton height={4} width={16} />
 					<Skeleton height={4} width={12} />
 				</Flex>
-				<Flex mt={4} gap={2} justifyContent={"space-between"} alignItems={"end"}>
-					<Skeleton height={8} width={16} startColor={"blue.500"} endColor={"blue.700"} />
+				<Flex mt={4} gap={2} justifyContent="space-between" alignItems="end">
+					<Skeleton height={8} width={16} startColor="blue.500" endColor="blue.700" />
 					<Skeleton height={5} width={20} />
 				</Flex>
-				<Skeleton mt={2} height={3} width={"100%"} startColor={"blue.500"} endColor={"blue.700"} />
-				<Flex mt={4} justifyContent={"space-between"} alignItems={"center"}>
+				<Skeleton mt={2} height={3} width="100%" startColor="blue.500" endColor="blue.700" />
+				<Flex mt={4} justifyContent="space-between" alignItems="center">
 					<Flex gap={2}>
 						<Skeleton height={4} width={16} />
 						<Skeleton height={4} width={24} />
 					</Flex>
 					<Flex gap={2}>
 						<Skeleton height={8} width={12} />
-						<Skeleton height={8} width={12} startColor={"blue.500"} endColor={"blue.700"} />
+						<Skeleton height={8} width={12} startColor="blue.500" endColor="blue.700" />
 					</Flex>
 				</Flex>
 			</Box>
@@ -174,37 +174,37 @@ const TorrentBox = ({ torrentData, hash, categories, loading, style }: TorrentBo
 
 	return (
 		<div style={style}>
-			<Box shadow={BoxShadow} px={5} py={4} rounded={"xl"} bgColor={BoxBg} mb={5}>
-				<Popover placement={"top"}>
+			<Box shadow={BoxShadow} px={5} py={4} rounded="xl" bgColor={BoxBg} mb={5}>
+				<Popover placement="top">
 					<PopoverTrigger>
-						<Flex alignItems={"center"}>
-							<Heading textAlign={"left"} cursor={"pointer"} noOfLines={1} size={"lg"} _hover={{ base: {}, lg: { opacity: 0.7 } }}>
+						<Flex alignItems="center">
+							<Heading textAlign="left" cursor="pointer" noOfLines={1} size="lg" _hover={{ base: {}, lg: { opacity: 0.7 } }}>
 								{torrentData.name}
 							</Heading>
 							{waiting === "name" && (
 								<Flex>
-									<Spinner size={"sm"} />
+									<Spinner size="sm" />
 								</Flex>
 							)}
 						</Flex>
 					</PopoverTrigger>
 					<PopoverContent>
-						<PopoverBody textAlign={"center"}>{torrentData.name}</PopoverBody>
+						<PopoverBody textAlign="center">{torrentData.name}</PopoverBody>
 					</PopoverContent>
 				</Popover>
-				<HStack color={"grayAlpha.800"} gap={2}>
+				<HStack color="grayAlpha.800" gap={2}>
 					<StatWithIcon icon={<IoCalendar />} label={new Date(torrentData.added_on * 1000).toLocaleDateString()} />
 					<StatWithIcon icon={<IoServer />} label={filesize(torrentData.total_size, { round: 1 })} />
 					<StatWithIcon loading={waiting === "category"} icon={<IoPricetags />} label={torrentData.category || "–"} />
 				</HStack>
-				<Flex mt={5} mb={2} justifyContent={"space-between"} alignItems={"end"}>
-					<HStack alignItems={"end"}>
-						<Heading color={"blue.500"} size={"lg"}>
+				<Flex mt={5} mb={2} justifyContent="space-between" alignItems="end">
+					<HStack alignItems="end">
+						<Heading color="blue.500" size="lg">
 							{(100 * torrentData.progress).toFixed(0)}%
 						</Heading>
-						{!isDone && <Text color={"grayAlpha.600"}>{filesize(torrentData.downloaded, { round: 1 })}</Text>}
+						{!isDone && <Text color="grayAlpha.600">{filesize(torrentData.downloaded, { round: 1 })}</Text>}
 					</HStack>
-					<Heading size={"md"} opacity={0.25}>
+					<Heading size="md" opacity={0.25}>
 						{torrentData.eta !== 8640000 ? (
 							<span>{timeString}</span>
 						) : (
@@ -213,11 +213,11 @@ const TorrentBox = ({ torrentData, hash, categories, loading, style }: TorrentBo
 					</Heading>
 				</Flex>
 				<LightMode>
-					<Progress rounded={100} size={"sm"} color={"blue.500"} value={100 * torrentData.progress} />
+					<Progress rounded={100} size="sm" color="blue.500" value={100 * torrentData.progress} />
 				</LightMode>
-				<Flex justifyContent={"flex-end"} alignItems={"center"} mt={3}>
+				<Flex justifyContent="flex-end" alignItems="center" mt={3}>
 					{isPaused || (
-						<Flex alignItems={"center"} gap={4} flexGrow={2}>
+						<Flex alignItems="center" gap={4} flexGrow={2}>
 							<StatWithIcon
 								lit={isDownloading ? torrentData.num_seeds > 0 : isDone ? torrentData.num_leechs > 0 : false}
 								icon={isDownloading ? <IoDownload size={25} /> : <IoCloudUpload size={20} />}
@@ -235,7 +235,7 @@ const TorrentBox = ({ torrentData, hash, categories, loading, style }: TorrentBo
 					<Flex gap={0.5}>
 						<IosActionSheet
 							trigger={
-								<Button variant={"ghost"} size={"md"} onClick={actionSheetDisclosure.onOpen}>
+								<Button variant="ghost" size="md" onClick={actionSheetDisclosure.onOpen}>
 									<IoOptions size={25} />
 								</Button>
 							}
@@ -300,12 +300,12 @@ const TorrentBox = ({ torrentData, hash, categories, loading, style }: TorrentBo
 						/>
 						{isPaused ? (
 							<LightMode>
-								<Button size={"md"} colorScheme={"blue"} onClick={() => resume()} isLoading={waiting === "mainBtn"}>
+								<Button size="md" colorScheme="blue" onClick={() => resume()} isLoading={waiting === "mainBtn"}>
 									<IoPlay size={25} />
 								</Button>
 							</LightMode>
 						) : (
-							<Button size={"md"} variant={"ghost"} color={"blue.500"} onClick={() => pause()} isLoading={waiting === "mainBtn"}>
+							<Button size="md" variant="ghost" color="blue.500" onClick={() => pause()} isLoading={waiting === "mainBtn"}>
 								<IoPause size={25} />
 							</Button>
 						)}
@@ -318,7 +318,7 @@ const TorrentBox = ({ torrentData, hash, categories, loading, style }: TorrentBo
 						<FormLabel>Rename Torrent</FormLabel>
 						<Input disabled={renameLoading} value={newName} onChange={(e) => setNewName(e.target.value)} />
 						{newName !== torrentData.name && (
-							<FormHelperText fontSize={"sm"} textAlign={"center"}>
+							<FormHelperText fontSize="sm" textAlign="center">
 								<VStack mt={7}>
 									<span>{torrentData.name}</span>
 									<IoArrowDown />
@@ -330,8 +330,8 @@ const TorrentBox = ({ torrentData, hash, categories, loading, style }: TorrentBo
 					<LightMode>
 						<Button
 							disabled={newName === torrentData.name}
-							colorScheme={"blue"}
-							w={"100%"}
+							colorScheme="blue"
+							w="100%"
 							onClick={() => renameTorrent()}
 							isLoading={renameLoading}
 						>

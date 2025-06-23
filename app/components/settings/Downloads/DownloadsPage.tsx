@@ -13,8 +13,8 @@ const DownloadsPage = (props: DownloadsPageProps) => {
 		<>
 			<WhenAddingTorrent />
 			<SettingsBox>
-				<SettingsSwitch label={"Pre-allocate disk space for all files"} settingKey={"preallocate_all"} />
-				<SettingsSwitch label={"Append .!qB extension to incomplete files"} settingKey={"incomplete_files_ext"} />
+				<SettingsSwitch label={"Pre-allocate disk space for all files"} settingKey="preallocate_all" />
+				<SettingsSwitch label={"Append .!qB extension to incomplete files"} settingKey="incomplete_files_ext" />
 			</SettingsBox>
 			<SavingManagement />
 			<RequestMoreSettings />

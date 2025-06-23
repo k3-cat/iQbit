@@ -18,7 +18,7 @@ const AllAnnouncementsPage = () => {
 	return (
 		<VStack gap={3} py={5}>
 			{data?.announcements.map((item) => (
-				<Alert variant={"subtle"} key={item.id} rounded={"md"}>
+				<Alert variant="subtle" key={item.id} rounded="md">
 					<Box>
 						<AlertTitle>{item.title}</AlertTitle>
 						<AlertDescription>{item.body}</AlertDescription>

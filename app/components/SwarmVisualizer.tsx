@@ -24,9 +24,9 @@ function SwarmDotWithMemoPosition(props: {
 
 	return (
 		<Box
-			position={"absolute"}
+			position="absolute"
 			top={randomTop}
-			rounded={"100%"}
+			rounded="100%"
 			h={props.height / props.swarm}
 			w={props.height / props.swarm}
 			minW={3}
@@ -56,11 +56,11 @@ const SwarmVisualizer = ({ connected, label, height, swarm }: SwarmVisualizerPro
 
 	return (
 		<>
-			<Flex position={"relative"} flexDirection={"column"} gap={1} width={"100%"} height={height} justifyContent={"space-around"}>
+			<Flex position="relative" flexDirection="column" gap={1} width="100%" height={height} justifyContent="space-around">
 				{Array.from(Array(rowAmount).keys()).map((row) => (
-					<Flex w={"100%"} key={row} gap={1} height={height} justifyContent={"space-around"}>
+					<Flex w="100%" key={row} gap={1} height={height} justifyContent="space-around">
 						{Array.from(Array(amountPerRow).keys()).map((col) => (
-							<Flex key={col} position={"relative"}>
+							<Flex key={col} position="relative">
 								<SwarmDotWithMemoPosition
 									height={height}
 									swarm={swarm}
@@ -74,10 +74,10 @@ const SwarmVisualizer = ({ connected, label, height, swarm }: SwarmVisualizerPro
 					</Flex>
 				))}
 			</Flex>
-			<Flex flexDirection={"column"} alignItems={"center"} justifyContent={"center"} alignSelf={"center"} rounded={"3xl"}>
+			<Flex flexDirection="column" alignItems="center" justifyContent="center" alignSelf="center" rounded="3xl">
 				<Heading mt={3}>{label}</Heading>
 				<Heading>{connected} Connected</Heading>
-				<Heading size={"md"}>{swarm} in Swarm</Heading>
+				<Heading size="md">{swarm} in Swarm</Heading>
 			</Flex>
 		</>
 	);

@@ -19,11 +19,11 @@ const ConnectionPage = () => {
 	return (
 		<>
 			<SettingsBox>
-				<SettingsSelect label={"Peer Connection Protocol"} settingKey={"bittorrent_protocol"} options={protocolOptions} />
+				<SettingsSelect label={"Peer Connection Protocol"} settingKey="bittorrent_protocol" options={protocolOptions} />
 			</SettingsBox>
 			<SettingsBox title={"Listening Port"}>
-				<SettingsTextInput label={"Port Used for Incoming Connections"} settingKey={"listen_port"} />
-				<SettingsSwitch label={"Use UPnP / NAT-PMP port forwarding from my router"} settingKey={"upnp"} />
+				<SettingsTextInput label={"Port Used for Incoming Connections"} settingKey="listen_port" />
+				<SettingsSwitch label={"Use UPnP / NAT-PMP port forwarding from my router"} settingKey="upnp" />
 			</SettingsBox>
 			<ConnectionLimits />
 			<ProxyServer />

@@ -39,13 +39,13 @@ export const AuthView = () => {
 
 	return (
 		<VStack backgroundColor={fakeBodyBg}>
-			<Box backgroundColor={fakeBodyBg} position={"fixed"} height={"100vh"} width={"100vw"} zIndex={-1} />
+			<Box backgroundColor={fakeBodyBg} position="fixed" height="100vh" width="100vw" zIndex={-1} />
 			<LogoHeader />
 			<VStack pt={5} px={10}>
-				<VStack mb={8} justifyContent={"center"}>
-					<Heading size={"sm"}>Please Sign In</Heading>
+				<VStack mb={8} justifyContent="center">
+					<Heading size="sm">Please Sign In</Heading>
 					<FormControl
-						as={"form"}
+						as="form"
 						pt={3}
 						isInvalid={!!formError}
 						onSubmit={(e) => {
@@ -53,15 +53,15 @@ export const AuthView = () => {
 							handleLogin({ username, password });
 						}}
 					>
-						<IosInput label={"Username"} labelWidth={105} first value={username} onChange={setUsername} />
-						<IosInput label={"Password"} password labelWidth={105} last value={password} onChange={setPassword} />
+						<IosInput label="Username" labelWidth={105} first value={username} onChange={setUsername} />
+						<IosInput label="Password" password labelWidth={105} last value={password} onChange={setPassword} />
 						<FormErrorMessage>{formError}</FormErrorMessage>
 						<Button
-							width={"100%"}
-							colorScheme={"blue"}
-							variant={"ghost"}
+							width="100%"
+							colorScheme="blue"
+							variant="ghost"
 							mt={20}
-							type={"submit"}
+							type="submit"
 							onClick={() => handleLogin({ username, password })}
 						>
 							Sign In

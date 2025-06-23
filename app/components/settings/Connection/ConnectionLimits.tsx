@@ -8,15 +8,15 @@ export interface ConnectionLimitsProps {}
 const ConnectionLimits = (props: ConnectionLimitsProps) => {
 	return (
 		<SettingsBox title={"Connection Limits"}>
-			<SettingsTextInput label={"Global Max Connection Limit"} settingKey={"max_connec"} withToggle disableDefaultValue={"500"} />
+			<SettingsTextInput label={"Global Max Connection Limit"} settingKey="max_connec" withToggle disableDefaultValue="500" />
 			<SettingsTextInput
 				label={"Max Connection Limit per Torrent"}
-				settingKey={"max_connec_per_torrent"}
+				settingKey="max_connec_per_torrent"
 				withToggle
-				disableDefaultValue={"100"}
+				disableDefaultValue="100"
 			/>
-			<SettingsTextInput label={"Global Max Upload Slots Limit"} settingKey={"max_uploads"} withToggle disableDefaultValue={"20"} />
-			<SettingsTextInput label={"Max Upload Slots Limit per Torrent"} settingKey={"max_uploads"} withToggle disableDefaultValue={"4"} />
+			<SettingsTextInput label={"Global Max Upload Slots Limit"} settingKey="max_uploads" withToggle disableDefaultValue="20" />
+			<SettingsTextInput label={"Max Upload Slots Limit per Torrent"} settingKey="max_uploads" withToggle disableDefaultValue="4" />
 		</SettingsBox>
 	);
 };

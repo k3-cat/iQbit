@@ -19,11 +19,11 @@ const IosSearch = ({ onSearch, isLoading, ...props }: IosSearchProps) => {
 		<Flex
 			zIndex={100}
 			py={{ base: 2, lg: 5 }}
-			backdropFilter={"blur(15px)"}
+			backdropFilter="blur(15px)"
 			bgColor={stickyBgColorInTab}
-			position={"sticky"}
+			position="sticky"
 			top={{ base: 0, lg: -7 }}
-			as={"form"}
+			as="form"
 			gap={3}
 			width={isLarge ? "calc(100% + (var(--chakra-space-5)) * 2)" : "100vw"}
 			px={5}
@@ -32,7 +32,7 @@ const IosSearch = ({ onSearch, isLoading, ...props }: IosSearchProps) => {
 				onSearch();
 			}}
 		>
-			<Input width={"100%"} borderColor={"grayAlpha.500"} bgColor={inputBg} {...props} />
+			<Input width="100%" borderColor="grayAlpha.500" bgColor={inputBg} {...props} />
 			<LightMode>
 				<Button
 					disabled={props.value === ""}
@@ -40,7 +40,7 @@ const IosSearch = ({ onSearch, isLoading, ...props }: IosSearchProps) => {
 					isLoading={isLoading}
 					isDisabled={isLoading}
 					leftIcon={<IoSearch size={20} />}
-					colorScheme={"blue"}
+					colorScheme="blue"
 					px={8}
 				>
 					{props.startStop && isLoading ? "Stop" : "Search"}

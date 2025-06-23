@@ -16,20 +16,20 @@ const SettingsSwitch = (props: SettingsSwitchProps) => {
 	return (
 		<>
 			<FormControl
-				display={"flex"}
+				display="flex"
 				flexDirection={props?.labelAbove ? "column" : "row"}
 				alignItems={props?.labelAbove ? "flex-start" : "center"}
 				gap={3}
-				width={"auto"}
+				width="auto"
 			>
 				{props?.labelAbove && (
-					<FormLabel whiteSpace={"nowrap"} mb={0}>
+					<FormLabel whiteSpace="nowrap" mb={0}>
 						{props.label}
 					</FormLabel>
 				)}
 				<LightMode>
 					<Switch
-						size={"lg"}
+						size="lg"
 						isChecked={settings?.[props.settingKey] as boolean}
 						onChange={(e) => updateSetting(props.settingKey, e.target.checked)}
 					/>

@@ -82,26 +82,26 @@ const PluginSearch = (props: SearchProviderComponentProps) => {
 
 			{searchId && (
 				<Flex
-					position={"sticky"}
+					position="sticky"
 					top={16}
-					alignItems={"center"}
-					justifyContent={"space-between"}
-					rounded={"lg"}
+					alignItems="center"
+					justifyContent="space-between"
+					rounded="lg"
 					p={4}
-					w={"100%"}
-					backdropFilter={"blur(15px)"}
+					w="100%"
+					backdropFilter="blur(15px)"
 					bgColor={stickyBgColorInTab}
 					zIndex={50}
 				>
-					<Flex alignItems={"center"} gap={4}>
-						<Spinner color={"blue.500"} />
-						<Flex flexDirection={"column"} alignItems={"start"}>
-							<Heading size={"md"}>Search in progress...</Heading>
+					<Flex alignItems="center" gap={4}>
+						<Spinner color="blue.500" />
+						<Flex flexDirection="column" alignItems="start">
+							<Heading size="md">Search in progress...</Heading>
 							<StatWithIcon icon={<IoList />} label={(data?.total || 0) + " Results"} />
 						</Flex>
 					</Flex>
 					<LightMode>
-						<Button leftIcon={<IoStop />} colorScheme={"blue"} onClick={() => stopSearch()}>
+						<Button leftIcon={<IoStop />} colorScheme="blue" onClick={() => stopSearch()}>
 							Stop
 						</Button>
 					</LightMode>

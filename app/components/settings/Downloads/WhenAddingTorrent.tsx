@@ -15,9 +15,9 @@ const WhenAddingTorrent = (props: WhenAddingTorrentProps) => {
 
 	return (
 		<SettingsBox title={"When adding a torrent"}>
-			<SettingsSelect label={"Torrent content layout"} settingKey={"torrent_content_layout"} options={createSubfolderOptions} />
-			<SettingsSwitch label={"Do not start the download automatically"} settingKey={"start_paused_enabled"} />
-			<SettingsSwitch label={"Delete .torrent files afterwards"} settingKey={"auto_delete_mode"} />
+			<SettingsSelect label={"Torrent content layout"} settingKey="torrent_content_layout" options={createSubfolderOptions} />
+			<SettingsSwitch label={"Do not start the download automatically"} settingKey="start_paused_enabled" />
+			<SettingsSwitch label={"Delete .torrent files afterwards"} settingKey="auto_delete_mode" />
 		</SettingsBox>
 	);
 };

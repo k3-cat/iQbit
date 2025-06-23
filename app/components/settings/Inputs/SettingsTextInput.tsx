@@ -22,14 +22,14 @@ const SettingsTextInput = (props: SettingsSwitchProps) => {
 
 	return (
 		<>
-			<Flex gap={3} width={"full"}>
+			<Flex gap={3} width="full">
 				{props.withToggle && (
 					<LightMode>
-						<FormControl width={"auto"}>
+						<FormControl width="auto">
 							<FormLabel>
 								<FormLabel>Enabled</FormLabel>
 								<Switch
-									size={"lg"}
+									size="lg"
 									isChecked={enabled}
 									onChange={(event) => {
 										setEnabled(event.target.checked);
@@ -42,7 +42,7 @@ const SettingsTextInput = (props: SettingsSwitchProps) => {
 				)}
 				<FormControl>
 					<FormLabel>{props.label}</FormLabel>
-					<InputGroup size={"lg"}>
+					<InputGroup size="lg">
 						<Input
 							placeholder={props.placeholder}
 							type={typeof settings?.[props.settingKey] === "number" ? "number" : "text"}

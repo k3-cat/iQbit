@@ -21,7 +21,7 @@ const SeedsAndPeers = ({ seeds, peers, size }: SeedsAndPeersProps) => {
 				lit
 				icon={<IoPeople />}
 				label={
-					<Text as={"span"} fontSize={"md"}>
+					<Text as="span" fontSize="md">
 						{seeds} Seeds
 					</Text>
 				}
@@ -30,7 +30,7 @@ const SeedsAndPeers = ({ seeds, peers, size }: SeedsAndPeersProps) => {
 				lit
 				icon={<IoPeople />}
 				label={
-					<Text as={"span"} fontSize={"md"}>
+					<Text as="span" fontSize="md">
 						{peers} Peers
 					</Text>
 				}
@@ -40,7 +40,7 @@ const SeedsAndPeers = ({ seeds, peers, size }: SeedsAndPeersProps) => {
 					lit
 					icon={<IoServer />}
 					label={
-						<Text as={"span"} fontSize={"md"}>
+						<Text as="span" fontSize="md">
 							{filesize(size, { round: 1 })}
 						</Text>
 					}

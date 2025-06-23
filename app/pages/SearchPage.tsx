@@ -58,17 +58,17 @@ const ProviderButton = (
 
 	return (
 		<Button
-			overflow={"hidden"}
-			position={"relative"}
+			overflow="hidden"
+			position="relative"
 			backgroundColor={backgroundColor}
-			variant={"ghost"}
-			shadow={"lg"}
+			variant="ghost"
+			shadow="lg"
 			onClick={props.onClick}
 			py={props.small ? 3 : 3}
 			minHeight={props.small ? 12 : 16}
 			border={"solid 3px white"}
 			borderColor={props.isSelected ? "blue.500" : backgroundColor}
-			rounded={"xl"}
+			rounded="xl"
 			_hover={{ backgroundColor: backgroundColor, shadow: "xl" }}
 			_focus={{
 				backgroundColor: backgroundColor,
@@ -77,7 +77,7 @@ const ProviderButton = (
 			{props.children}
 			{props.experimental && (
 				<LightMode>
-					<Text w={"100%"} fontSize={"xs"} position={"absolute"} bottom={0} bgColor={"blue.500"}>
+					<Text w="100%" fontSize="xs" position="absolute" bottom={0} bgColor="blue.500">
 						EXPERIMENTAL
 					</Text>
 				</LightMode>
@@ -106,14 +106,14 @@ const SearchPage = () => {
 
 	return (
 		<>
-			<PageHeader title={"Search"} />
-			<Text color={"gray.500"} mb={5}>
+			<PageHeader title="Search" />
+			<Text color="gray.500" mb={5}>
 				Warning: Be sure to comply with your country's copyright laws when downloading torrents from any of these search engines.
 			</Text>
-			<Heading size={"md"} mb={3}>
+			<Heading size="md" mb={3}>
 				Select Search Provider
 			</Heading>
-			<Flex mb={3} gap={3} overflowX={"scroll"} mx={-5} pl={5} className={"no-scrollbar"}>
+			<Flex mb={3} gap={3} overflowX="scroll" mx={-5} pl={5} className="no-scrollbar">
 				<Flex w={{ base: providersWidth + "px", xl: "100%" }} gap={3} pr={{ base: 20, lg: 0 }} wrap={{ lg: "wrap" }}>
 					{Object.entries(providers)
 						.filter((provider) => (provider[1].name === "Plugins" ? !!plugins?.length : true))
@@ -130,7 +130,7 @@ const SearchPage = () => {
 				</Flex>
 			</Flex>
 			{providers[selectedProvider].categories.length > 1 && (
-				<Flex gap={3} overflowX={"auto"} mx={-5} pl={5} className={"no-scrollbar"}>
+				<Flex gap={3} overflowX="auto" mx={-5} pl={5} className="no-scrollbar">
 					<Flex w={{ base: providersWidth + "px", xl: "100%" }} gap={3} pr={{ base: 20, lg: 0 }} wrap={{ lg: "wrap" }}>
 						{providers[selectedProvider].categories.map((item, key) => (
 							<ProviderButton key={key} isSelected={key === selectedCategory} onClick={() => setSelectedCategory(key)} small>

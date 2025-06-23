@@ -37,9 +37,9 @@ export const SectionSM = ({
 	titleRight,
 }: PropsWithChildren<{ title: string; titleProps?: HeadingProps; titleRight?: ReactNode }>) => {
 	return (
-		<VStack alignItems={"flex-start"} w={"100%"}>
-			<Flex w={"100%"}>
-				<Heading {...titleProps} flexGrow={1} size={"sm"}>
+		<VStack alignItems="flex-start" w="100%">
+			<Flex w="100%">
+				<Heading {...titleProps} flexGrow={1} size="sm">
 					{title}
 				</Heading>
 				{titleRight}
@@ -143,14 +143,14 @@ const YTSSearch = (props: SearchProviderComponentProps) => {
 				titleExtractor={(movie) => movie.title_english}
 				onSelect={(movie) => selectMovie(movie)}
 			/>
-			<Box flexGrow={1} minW={"200px"} />
+			<Box flexGrow={1} minW="200px" />
 			<IosBottomSheet
 				title={selectedMovie?.title || ""}
 				disclosure={bottomSheetDisclosure}
 				modalProps={{ size: "xl", scrollBehavior: "inside" }}
 			>
-				<Flex flexDirection={"column"} gap={4}>
-					<SectionSM title={"Torrents"} titleRight={<CategorySelect category={addToCategory} onSelected={setAddToCategory} />}>
+				<Flex flexDirection="column" gap={4}>
+					<SectionSM title="Torrents" titleRight={<CategorySelect category={addToCategory} onSelected={setAddToCategory} />}>
 						{(selectedMovie?.torrents || []).map((torrent) => {
 							return (
 								<TorrentDownloadBox
@@ -161,7 +161,7 @@ const YTSSearch = (props: SearchProviderComponentProps) => {
 									)}
 									category={addToCategory}
 								>
-									<Flex flexDirection={"column"} width={"100%"}>
+									<Flex flexDirection="column" width="100%">
 										<TorrentMovieData quality={torrent.quality} type={torrent.type} size={torrent.size_bytes} />
 										<SeedsAndPeers seeds={torrent.seeds.toString()} peers={torrent.peers.toString()} />
 									</Flex>
@@ -169,28 +169,28 @@ const YTSSearch = (props: SearchProviderComponentProps) => {
 							);
 						})}
 					</SectionSM>
-					<SectionSM title={"Description"}>
+					<SectionSM title="Description">
 						<Text noOfLines={expandedDescription ? undefined : 2}>{selectedMovie?.description_full}</Text>
-						<Button size={"sm"} variant={"ghost"} alignSelf={"end"} onClick={toggleExpandedDescription}>
+						<Button size="sm" variant="ghost" alignSelf="end" onClick={toggleExpandedDescription}>
 							{expandedDescription ? "Read Less" : "Read More"}
 						</Button>
 					</SectionSM>
-					<SectionSM title={"Info"}>
-						<Flex width={"100%"} gap={3} fontSize={"xl"} wrap={"wrap"}>
-							<InfoDataBox title={"Ratings"} icon={<SiRottentomatoes />} label={(selectedMovie?.rating || "--") + " / 10"} />
-							<InfoDataBox title={"Runtime"} icon={<IoTime />} label={(selectedMovie?.runtime || "--") + " min"} />
-							<InfoDataBox title={"Language"} icon={<IoEarth />} label={selectedMovie?.language || ""} />
+					<SectionSM title="Info">
+						<Flex width="100%" gap={3} fontSize="xl" wrap="wrap">
+							<InfoDataBox title="Ratings" icon={<SiRottentomatoes />} label={(selectedMovie?.rating || "--") + " / 10"} />
+							<InfoDataBox title="Runtime" icon={<IoTime />} label={(selectedMovie?.runtime || "--") + " min"} />
+							<InfoDataBox title="Language" icon={<IoEarth />} label={selectedMovie?.language || ""} />
 							<InfoDataBox title={"MPA Rating"} icon={<IoWarning />} label={selectedMovie?.mpa_rating || ""} />
-							<InfoDataBox title={"Genres"} icon={<IoPricetags />} label={(selectedMovie?.genres || []).join(", ")} />
+							<InfoDataBox title="Genres" icon={<IoPricetags />} label={(selectedMovie?.genres || []).join(", ")} />
 						</Flex>
 					</SectionSM>
 					{selectedMovie?.yt_trailer_code && (
-						<SectionSM title={"Trailer"}>
-							<AspectRatio ratio={16 / 9} width={"100%"}>
+						<SectionSM title="Trailer">
+							<AspectRatio ratio={16 / 9} width="100%">
 								<iframe
-									width={"100%"}
-									height={"100%"}
-									className={"movieTrailer"}
+									width="100%"
+									height="100%"
+									className="movieTrailer"
 									title={"Movie Trailer"}
 									src={"https://www.youtube.com/embed/" + selectedMovie.yt_trailer_code}
 								/>

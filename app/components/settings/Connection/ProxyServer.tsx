@@ -48,21 +48,21 @@ const ProxyServer = () => {
 
 	return (
 		<SettingsBox title={"Proxy Server"}>
-			<SettingsSelect label={"Type"} settingKey={"proxy_type"} options={proxyTypeOptions} />
+			<SettingsSelect label="Type" settingKey="proxy_type" options={proxyTypeOptions} />
 			{settings?.proxy_type !== TorrSettingsProxyType.disabled && (
 				<>
 					<Flex gap={3} flexDirection={{ base: "column", lg: "row" }}>
-						<SettingsTextInput label={"Host"} settingKey={"proxy_ip"} />
-						<SettingsTextInput label={"Port"} settingKey={"proxy_port"} />
+						<SettingsTextInput label="Host" settingKey="proxy_ip" />
+						<SettingsTextInput label="Port" settingKey="proxy_port" />
 					</Flex>
-					<SettingsSwitch label={"Use proxy for peer connections"} settingKey={"proxy_peer_connections"} />
-					<SettingsSwitch label={"Use proxy only for torrents"} settingKey={"proxy_torrents_only"} />
+					<SettingsSwitch label={"Use proxy for peer connections"} settingKey="proxy_peer_connections" />
+					<SettingsSwitch label={"Use proxy only for torrents"} settingKey="proxy_torrents_only" />
 				</>
 			)}
 			{ProxyWithAuth && (
-				<SettingsBox title={"Authentication"}>
-					<SettingsTextInput label={"Username"} settingKey={"proxy_username"} />
-					<SettingsTextInput label={"Password"} settingKey={"proxy_password"} helperText={"The password is saved unencrypted"} />
+				<SettingsBox title="Authentication">
+					<SettingsTextInput label="Username" settingKey="proxy_username" />
+					<SettingsTextInput label="Password" settingKey="proxy_password" helperText={"The password is saved unencrypted"} />
 				</SettingsBox>
 			)}
 		</SettingsBox>

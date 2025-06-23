@@ -20,7 +20,7 @@ const SettingsTextArea = (props: SettingsSwitchProps) => {
 				<FormLabel>{props.label}</FormLabel>
 				<Textarea
 					isDisabled={props.disabled}
-					size={"lg"}
+					size="lg"
 					value={settings?.[props.settingKey] as string}
 					onChange={(e) => updateSetting(props.settingKey, e.target.value)}
 				/>

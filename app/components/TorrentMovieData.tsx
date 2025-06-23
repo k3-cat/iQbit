@@ -14,7 +14,7 @@ export interface TorrentMovieDataProps {
 
 const TorrentMovieData = (props: TorrentMovieDataProps) => {
 	return (
-		<SimpleGrid gap={3} width={"100%"} columns={3} mb={1}>
+		<SimpleGrid gap={3} width="100%" columns={3} mb={1}>
 			<StatWithIcon lit icon={<IoTv {...torrentBoxIconProps} />} label={props.quality} />
 			<StatWithIcon lit icon={<IoFilm {...torrentBoxIconProps} />} label={props.type} />
 			<StatWithIcon

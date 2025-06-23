@@ -141,34 +141,34 @@ const SettingsHeader = ({ title, onBackButtonPress }: { title: string; onBackBut
 
 	return (
 		<Flex
-			justifyContent={"center"}
-			alignItems={"center"}
+			justifyContent="center"
+			alignItems="center"
 			pt={isLarge ? 0 : 7}
 			pb={5}
 			width={isLarge ? "calc(100% + (var(--chakra-space-5)) * 2)" : "100vw"}
 			position={isLarge ? "relative" : "fixed"}
 			left={isLarge ? -5 : 0}
 			borderBottomWidth={3}
-			borderBottomStyle={"solid"}
-			borderColor={"grayAlpha.300"}
-			bgColor={"gray.900"}
-			backdropFilter={"blur(15px)"}
+			borderBottomStyle="solid"
+			borderColor="grayAlpha.300"
+			bgColor="gray.900"
+			backdropFilter="blur(15px)"
 			zIndex={20}
 		>
 			<Button
-				size={"lg"}
-				variant={"unstyled"}
-				display={"flex"}
-				alignItems={"center"}
-				position={"absolute"}
+				size="lg"
+				variant="unstyled"
+				display="flex"
+				alignItems="center"
+				position="absolute"
 				left={5}
 				onClick={onBackButtonPress}
-				color={"blue.500"}
+				color="blue.500"
 			>
 				<IoChevronBack size={18} />
 				Back
 			</Button>
-			<Heading size={"md"} alignItems={"center"}>
+			<Heading size="md" alignItems="center">
 				{title}
 			</Heading>
 		</Flex>
@@ -183,7 +183,7 @@ const SettingsPage = () => {
 	return (
 		<SettingsProvider>
 			<SettingsHeader title={page || "Settings"} onBackButtonPress={page ? () => setPage(undefined) : undefined} />
-			<Flex minH={"100%"} flexDirection={"column"}>
+			<Flex minH="100%" flexDirection="column">
 				{!!page && (
 					<Box flexGrow={2} pt={isLarge ? 0 : 24}>
 						{SettingsPages[page].component}
@@ -192,21 +192,21 @@ const SettingsPage = () => {
 				{!page &&
 					(isLarge ? (
 						<Box flexGrow={2}>
-							<Grid gap={2} pt={2} width={"100%"} justifyContent={"flex-start"} templateColumns={"repeat( auto-fit, minmax(150px, 1fr) )"}>
+							<Grid gap={2} pt={2} width="100%" justifyContent="flex-start" templateColumns={"repeat( auto-fit, minmax(150px, 1fr) )"}>
 								{Object.entries(SettingsPages).map(
 									([pageName, { icon, mobileOnly }]) =>
 										!mobileOnly && (
 											<Button
-												minW={"150px"}
+												minW="150px"
 												gap={2}
-												variant={"outline"}
-												flexDirection={"column"}
+												variant="outline"
+												flexDirection="column"
 												flexGrow={2}
 												key={pageName}
 												p={4}
-												height={"100%"}
+												height="100%"
 												onClick={() => setPage(pageName as settingsPageNames)}
-												colorScheme={"blue"}
+												colorScheme="blue"
 											>
 												{icon}
 												{pageName}
@@ -217,7 +217,7 @@ const SettingsPage = () => {
 						</Box>
 					) : (
 						<Box flexGrow={2}>
-							<Flex mt={4} flexDirection={"column"}>
+							<Flex mt={4} flexDirection="column">
 								{smartMap(Object.entries(SettingsPages), ([pageName, { icon, color, group }], { isFirst, isLast, prevItem }) => {
 									return (
 										<Fragment key={pageName}>
@@ -229,20 +229,20 @@ const SettingsPage = () => {
 											<Button
 												mb={-1}
 												gap={2}
-												variant={"outline"}
-												justifyContent={"space-between"}
+												variant="outline"
+												justifyContent="space-between"
 												flexGrow={2}
 												px={4}
 												py={3}
-												height={"100%"}
+												height="100%"
 												onClick={() => setPage(pageName as settingsPageNames)}
 												rounded={0}
 												roundedTop={isFirst ? "lg" : undefined}
 												roundedBottom={isLast ? "lg" : undefined}
 												backgroundColor={mobileButtonBackground}
 											>
-												<Flex as={"span"} alignItems={"center"}>
-													<Box as={"span"} p={2} backgroundColor={color} rounded={"md"} color={"white"} mr={3}>
+												<Flex as="span" alignItems="center">
+													<Box as="span" p={2} backgroundColor={color} rounded="md" color="white" mr={3}>
 														{icon}
 													</Box>
 													{pageName}
@@ -259,7 +259,7 @@ const SettingsPage = () => {
 			</Flex>
 
 			{!isLarge && !page && (
-				<Button width={"100%"} colorScheme={"red"} variant={"ghost"} onClick={logout}>
+				<Button width="100%" colorScheme="red" variant="ghost" onClick={logout}>
 					Log Out
 				</Button>
 			)}

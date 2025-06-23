@@ -86,8 +86,8 @@ const TrendingPage = () => {
 
 	return (
 		<>
-			<PageHeader title={"Trending"} />
-			<Text color={"gray.500"}>Trending Movies and Shows from TMDB</Text>
+			<PageHeader title="Trending" />
+			<Text color="gray.500">Trending Movies and Shows from TMDB</Text>
 			<SegmentedPicker options={tabs} selected={tab} onSelect={setTab} />
 			{tab === 0 ? (
 				<PosterGrid
@@ -119,7 +119,7 @@ const TrendingPage = () => {
 					}}
 				/>
 			) : tab === 2 ? (
-				<Flex flexDir={"column"}>
+				<Flex flexDir="column">
 					<PosterGrid
 						list={(topMoviesData as MovieResult[]) || []}
 						keyExtractor={(item) => item?.id?.toString() || Math.random().toString()}
@@ -134,31 +134,31 @@ const TrendingPage = () => {
 							setSelectedMovie(movie);
 						}}
 					/>
-					<Button mt={3} width={"full"} variant={"ghost"} colorScheme={"blue"} onClick={handleLoadMore}>
+					<Button mt={3} width="full" variant="ghost" colorScheme="blue" onClick={handleLoadMore}>
 						Load More
 					</Button>
 				</Flex>
 			) : null}
 
 			<IosBottomSheet modalProps={{ size: "xl" }} title={selectedMovie?.title ?? ""} disclosure={movieBottomSheet}>
-				<Flex flexDirection={"column"} gap={4}>
+				<Flex flexDirection="column" gap={4}>
 					<SectionSM title={"Download from YTS"}>
 						{torrsLoading ? (
-							<Flex justifyContent={"center"} w={"full"}>
-								<Spinner color={"blue"} mt={3} />
+							<Flex justifyContent="center" w="full">
+								<Spinner color="blue" mt={3} />
 							</Flex>
 						) : (TorrData?.movies?.[0]?.torrents?.length || 0) === 0 ? (
-							<Flex flexDirection={"column"} gap={4} w={"100%"}>
+							<Flex flexDirection="column" gap={4} w="100%">
 								<Text opacity={0.5}>YTS might have it but I did not find it automagically.</Text>
 								{providerMapper.map(([key, data]) => (
 									<Flex
 										key={key}
 										flexDirection={{ base: "column", lg: "row" }}
-										alignItems={"center"}
+										alignItems="center"
 										gap={3}
 										bg={bgColor}
-										rounded={"lg"}
-										justifyContent={"space-between"}
+										rounded="lg"
+										justifyContent="space-between"
 										p={3}
 										flexGrow={1}
 										minWidth={{ base: "200px", lg: "100%" }}
@@ -167,7 +167,7 @@ const TrendingPage = () => {
 										<Flex>{data.logo}</Flex>
 										<LightMode>
 											<Button
-												colorScheme={"blue"}
+												colorScheme="blue"
 												onClick={() =>
 													push("/search", {
 														replace: true,
@@ -185,7 +185,7 @@ const TrendingPage = () => {
 								))}
 							</Flex>
 						) : (
-							<Box p={3} rounded={"md"} bgColor={bgColor} w={"full"}>
+							<Box p={3} rounded="md" bgColor={bgColor} w="full">
 								<Text>
 									Showing torrents for <b>{TorrData?.movies?.[0].title}</b> released in <b>{TorrData?.movies?.[0].year}</b>
 								</Text>
@@ -201,7 +201,7 @@ const TrendingPage = () => {
 										`${TorrData?.movies[0].title} (${TorrData?.movies[0].year || "--"})` || "Title not found",
 									)}
 								>
-									<Flex flexDirection={"column"} width={"100%"}>
+									<Flex flexDirection="column" width="100%">
 										<TorrentMovieData quality={torrent.quality} type={torrent.type} size={torrent.size_bytes} />
 										<SeedsAndPeers seeds={torrent.seeds.toString()} peers={torrent.peers.toString()} />
 									</Flex>
@@ -209,25 +209,25 @@ const TrendingPage = () => {
 							);
 						})}
 					</SectionSM>
-					<SectionSM title={"Description"}>
+					<SectionSM title="Description">
 						<Text>{selectedMovie?.overview}</Text>
 					</SectionSM>
 				</Flex>
 			</IosBottomSheet>
 
 			<IosBottomSheet title={selectedTv?.name ?? ""} disclosure={tvBottomSheet} modalProps={{ size: "xl" }}>
-				<Flex flexDirection={"column"} gap={4}>
+				<Flex flexDirection="column" gap={4}>
 					<SectionSM title={"Search Torrent"}>
-						<Flex flexWrap={"wrap"} gap={3} flexDirection={{ base: "row", lg: "column" }} width={"100%"}>
+						<Flex flexWrap="wrap" gap={3} flexDirection={{ base: "row", lg: "column" }} width="100%">
 							{providerMapper.map(([key, data]) => (
 								<Flex
 									key={key}
 									flexDirection={{ base: "column", lg: "row" }}
-									alignItems={"center"}
+									alignItems="center"
 									gap={3}
 									bg={bgColor}
-									rounded={"lg"}
-									justifyContent={"space-between"}
+									rounded="lg"
+									justifyContent="space-between"
 									p={3}
 									flexGrow={1}
 									minWidth={{ base: "200px", lg: "100%" }}
@@ -236,7 +236,7 @@ const TrendingPage = () => {
 									<Flex>{data.logo}</Flex>
 									<LightMode>
 										<Button
-											colorScheme={"blue"}
+											colorScheme="blue"
 											onClick={() =>
 												push("/search", {
 													replace: true,
@@ -251,7 +251,7 @@ const TrendingPage = () => {
 							))}
 						</Flex>
 					</SectionSM>
-					<SectionSM title={"Description"}>
+					<SectionSM title="Description">
 						<Text>{selectedTv?.overview}</Text>
 					</SectionSM>
 				</Flex>

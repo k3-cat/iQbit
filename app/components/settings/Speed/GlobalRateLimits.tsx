@@ -9,8 +9,8 @@ export function GlobalRateLimits() {
 		<SettingsBox title={"Global Rate Limits"}>
 			<Text>0 means unlimited</Text>
 			<SimpleGrid columns={{ base: 1, lg: 2 }} gap={6}>
-				<SettingsTextInput label={"Upload"} settingKey={"up_limit"} rightAddon={"KiB/s"} />
-				<SettingsTextInput label={"Download"} settingKey={"up_limit"} rightAddon={"KiB/s"} />
+				<SettingsTextInput label="Upload" settingKey="up_limit" rightAddon="KiB/s" />
+				<SettingsTextInput label="Download" settingKey="up_limit" rightAddon="KiB/s" />
 			</SimpleGrid>
 		</SettingsBox>
 	);
